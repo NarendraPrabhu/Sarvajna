@@ -36,8 +36,12 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
             }
         }
         tripadiViewModel = ViewModelProviders.of(this, factory).get(TripadiViewModel::class.java)
-        listView = findViewById<ListView>(R.id.list)
+        listView = findViewById(R.id.list)
+    }
 
+    override fun onResume() {
+        super.onResume()
+        tripadiViewModel?.refresh()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -61,13 +65,7 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
         return super.onOptionsItemSelected(item)
     }
 
-    inner class TripadiAdapter : BaseAdapter () {
-
-        var items : List<Tripadi>? = null
-
-        fun setData(data : List<Tripadi>?) : Unit {
-            this.items = data
-        }
+    inner class TripadiAdapter(val items : List<Tripadi>) : BaseAdapter () {
 
         override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
             var binding : ViewTripadiBinding?
@@ -85,7 +83,7 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
         }
 
         override fun getItem(p0: Int): Tripadi? {
-            return items?.get(p0)
+            return items.get(p0)
         }
 
         override fun getItemId(p0: Int): Long {
@@ -125,22 +123,22 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
 
     override fun edit(tripadi: Tripadi) {
         if(tripadi != null){
-            tripadiViewModel?.update(tripadi);
+            tripadiViewModel?.update(tripadi)
         }
     }
 
     override fun queried(tripadis: List<Tripadi>?) {
         runOnUiThread {
           if (tripadis != null) {
-              var adapter = TripadiAdapter()
-              adapter.setData(tripadis)
-              listView?.adapter = adapter
+              listView?.adapter = TripadiAdapter(tripadis)
           }
         }
     }
 
     override fun updated(unit : Unit?) {
+        runOnUiThread {
 
+        }
     }
 
     override fun onQueryTextSubmit(p0: String?): Boolean {

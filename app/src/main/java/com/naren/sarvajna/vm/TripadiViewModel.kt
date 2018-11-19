@@ -41,7 +41,7 @@ class TripadiViewModel (activity: Activity, private val databaseEvents: Database
         favorite.value = false
     }
 
-    fun query(q : String, f : Boolean) : Unit {
+    private fun query(q : String, f : Boolean) : Unit {
         thread {
             databaseEvents.queried(if (f) tripadiDao?.query(q, if (f) 1 else 0) else tripadiDao?.query(q))
         }
@@ -59,5 +59,9 @@ class TripadiViewModel (activity: Activity, private val databaseEvents: Database
         thread {
             databaseEvents.updated(tripadiDao?.update(tripadi))
         }
+    }
+
+    fun refresh() {
+        query(query?.value!!, favorite?.value!!)
     }
 }
