@@ -1,6 +1,5 @@
 package com.naren.sarvajna.ui
 
-import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
@@ -145,13 +144,11 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
     }
 
     override fun onQueryTextSubmit(p0: String?): Boolean {
-        if(!p0?.isEmpty()!!){
-            tripadiViewModel?.changeQuery("%".plus(p0).plus("%"))
-        }
         return false
     }
 
     override fun onQueryTextChange(p0: String?): Boolean {
+        tripadiViewModel?.changeQuery("%".plus( p0?.toString() ?: "").plus("%"))
         return false
     }
 

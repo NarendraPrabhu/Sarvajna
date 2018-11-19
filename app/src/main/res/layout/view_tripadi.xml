@@ -8,11 +8,11 @@
             android:layout_width="match_parent"
             android:layout_margin="5dp"
             android:background="@drawable/item_bg"
-            android:minHeight="90dp"
+            android:minHeight="100dp"
             android:layout_height="wrap_content">
         <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="5dp"
                 android:layout_centerVertical="true"
@@ -21,39 +21,38 @@
                 android:textSize="14sp"
                 android:layout_margin="10dp"
                 android:id="@+id/tripadi"
-                android:minHeight="50dp"/>
+                android:minHeight="80dp"/>
+        <ImageButton
+                android:layout_width="35dp"
+                android:src="@drawable/ic_share"
+                android:adjustViewBounds="true"
+                android:layout_below="@id/tripadi"
+                android:layout_margin="5dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="@{(v)->events.share(tripadi)}"
+                android:background="@android:drawable/menuitem_background"
+                android:id="@+id/share"
+                android:layout_height="35dp"/>
         <CheckBox
                 android:id="@+id/favorite"
                 android:padding="5dp"
                 android:button="@drawable/selector_favorite"
                 android:background="@android:drawable/menuitem_background"
                 android:layout_below="@id/tripadi"
-                android:layout_centerHorizontal="true"
+                android:layout_toLeftOf="@id/share"
+                android:layout_toStartOf="@+id/share"
                 android:checked="@={tripadi.favorite}"
                 android:layout_margin="5dp"
                 android:onClick="@{(v)->events.edit(tripadi)}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
-        <ImageButton
-                android:layout_width="35dp"
-                android:src="@drawable/ic_share"
-                android:adjustViewBounds="true"
-                android:layout_below="@id/tripadi"
-                android:layout_toLeftOf="@id/favorite"
-                android:layout_toStartOf="@+id/favorite"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_margin="5dp"
-                android:onClick="@{(v)->events.share(tripadi)}"
-                android:background="@android:drawable/menuitem_background"
-                android:id="@+id/share"
-                android:layout_height="35dp"/>
+
         <ImageButton
                 android:layout_width="35dp"
                 android:src="@drawable/ic_content_copy"
-                android:layout_toEndOf="@id/favorite"
+                android:layout_toEndOf="@id/share"
                 android:layout_below="@id/tripadi"
-                android:layout_toRightOf="@+id/favorite"
+                android:layout_toRightOf="@+id/share"
                 android:adjustViewBounds="true"
                 android:background="@android:drawable/menuitem_background"
                 android:layout_margin="5dp"
