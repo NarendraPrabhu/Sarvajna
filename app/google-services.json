@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1070284045167",
+    "firebase_url": "https://tripadi-e5f44.firebaseio.com",
+    "project_id": "tripadi-e5f44",
+    "storage_bucket": "tripadi-e5f44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070284045167:android:6437feda6edf4482",
+        "android_client_info": {
+          "package_name": "com.naren.sarvajna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070284045167-cait3ej9ua92um9jem60imn2jm6reh2h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMfDmZLM5uM3Eu6M7fH5WnPfKvyPGSqoE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
