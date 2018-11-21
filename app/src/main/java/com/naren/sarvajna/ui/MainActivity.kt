@@ -10,10 +10,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.SearchView
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.Toast
@@ -26,6 +23,8 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
 
     var listView : ListView? = null
     var tripadiViewModel : TripadiViewModel? = null
+    var isFirstTime : Boolean = true
+    var searchView : SearchView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
             }
         }
         tripadiViewModel = ViewModelProviders.of(this, factory).get(TripadiViewModel::class.java)
-        listView = findViewById(R.id.list)
+        listView = findViewById<ListView>(R.id.list)
     }
 
     override fun onResume() {
@@ -49,6 +48,11 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
         var searchView = menu?.findItem(R.id.menu_search)?.actionView as SearchView
         searchView?.setOnQueryTextListener(this@MainActivity)
         return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+        searchView = menu?.findItem(R.id.menu_search)?.actionView as SearchView
+        return super.onPrepareOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -108,7 +112,7 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
         if(tripadi != null) {
             val intent = Intent(Intent.ACTION_SEND)
             intent.type = "text/*"
-            intent.putExtra(Intent.EXTRA_TEXT, true.toString())
+            intent.putExtra(Intent.EXTRA_TEXT, tripadi.toString())
             val pm = packageManager
             if (pm != null) {
                 val infos = pm.queryIntentActivities(intent, 0)
@@ -129,16 +133,20 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
 
     override fun queried(tripadis: List<Tripadi>?) {
         runOnUiThread {
-          if (tripadis != null) {
-              listView?.adapter = TripadiAdapter(tripadis)
-          }
+            if (tripadis != null) {
+                listView?.adapter = TripadiAdapter(tripadis)
+                if(isFirstTime) {
+                    isFirstTime = false
+                    listView?.post{
+                        listView?.smoothScrollToPositionFromTop(getPostion(),0)
+                    }
+                }
+            }
         }
     }
 
     override fun updated(unit : Unit?) {
-        runOnUiThread {
 
-        }
     }
 
     override fun onQueryTextSubmit(p0: String?): Boolean {
@@ -148,6 +156,36 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
     override fun onQueryTextChange(p0: String?): Boolean {
         tripadiViewModel?.changeQuery("%".plus( p0?.toString() ?: "").plus("%"))
         return false
+    }
+
+    override fun onBackPressed() {
+        if(searchView?.isIconified?.and(true) == false) {
+            searchView?.isIconified = true
+            return
+        }
+
+        var position = listView?.firstVisiblePosition
+        position = if (position?.compareTo(0)!! >= 0) position else 0
+        savePosition(position!!)
+        super.onBackPressed()
+    }
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if(keyCode == KeyEvent.KEYCODE_BACK){
+            onBackPressed()
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
+    }
+
+    fun savePosition(position : Int) {
+        var editor = getPreferences(Context.MODE_PRIVATE).edit();
+        editor.putInt("position", position).commit()
+    }
+
+    fun getPostion() : Int{
+        var prefs = getPreferences(Context.MODE_PRIVATE)
+        return prefs.getInt("position", 0)
     }
 
 }

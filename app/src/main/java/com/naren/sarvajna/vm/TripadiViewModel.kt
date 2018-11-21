@@ -30,15 +30,13 @@ class TripadiViewModel (activity: Activity, private val databaseEvents: Database
     init {
         tripadiDao = TripadiDatabase.getInstance(activity.applicationContext)?.tripadiDao()
         query.observe(activity as LifecycleOwner, Observer { queryString ->
-            val q = if (queryString?.isEmpty()!!) "%%" else queryString
-            query(q, favorite.value!!)
+            val q = queryString?.toString() ?: "%%"
+            query(q, favorite.value?.and(true) ?: false)
         })
         favorite.observe(activity as LifecycleOwner, Observer { isFavorite ->
             val f = isFavorite?.and(true) ?: false
-            query(query.value!!, f)
+            query(query.value?.toString() ?: "%%", f)
         })
-        query.value = "%%"
-        favorite.value = false
     }
 
     private fun query(q : String, f : Boolean) : Unit {
@@ -62,6 +60,6 @@ class TripadiViewModel (activity: Activity, private val databaseEvents: Database
     }
 
     fun refresh() {
-        query(query?.value!!, favorite?.value!!)
+        query(query?.value?.toString() ?: "%%", favorite?.value?.and(true) ?: false)
     }
 }
