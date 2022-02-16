@@ -8,6 +8,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.support.annotation.NonNull
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.SearchView
 import android.view.*
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
         return super.onPrepareOptionsMenu(menu)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    override fun onOptionsItemSelected(@NonNull item: MenuItem): Boolean {
         when(item?.itemId){
             R.id.menu_search -> {}
             R.id.menu_favorite -> {
@@ -103,7 +104,7 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
         if (tripadi != null) {
             val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("Kagga", tripadi.toString())
-            clipboard.primaryClip = clip
+            clipboard.setPrimaryClip(clip)
             Toast.makeText(this, R.string.warning_kagga_copied, Toast.LENGTH_SHORT).show()
         }
     }

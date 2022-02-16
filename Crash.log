@@ -1,341 +1,507 @@
 --------- beginning of main
-11-19 12:16:42.667  1657  1671 E memtrack: Couldn't load memtrack module
-11-19 12:16:42.667  1657  1671 W android.os.Debug: failed to get memory consumption info: -1
-11-19 12:16:50.837 14945 14945 D AndroidRuntime: Shutting down VM
---------- beginning of crash
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: FATAL EXCEPTION: main
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: Process: com.naren.sarvajna, PID: 14945
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: java.lang.ClassCastException: android.text.SpannableStringBuilder cannot be cast to java.lang.String
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at com.naren.sarvajna.ui.MainActivity.onOptionsItemSelected(MainActivity.kt:67)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.app.Activity.onMenuItemSelected(Activity.java:3450)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v4.app.FragmentActivity.onMenuItemSelected(FragmentActivity.java:436)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.app.AppCompatActivity.onMenuItemSelected(AppCompatActivity.java:196)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.view.WindowCallbackWrapper.onMenuItemSelected(WindowCallbackWrapper.java:109)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.app.AppCompatDelegateImpl.onMenuItemSelected(AppCompatDelegateImpl.java:888)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.view.menu.MenuBuilder.dispatchMenuItemSelected(MenuBuilder.java:840)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.view.menu.MenuItemImpl.invoke(MenuItemImpl.java:158)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.view.menu.MenuBuilder.performItemAction(MenuBuilder.java:991)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.view.menu.MenuBuilder.performItemAction(MenuBuilder.java:981)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.widget.ActionMenuView.invokeItem(ActionMenuView.java:625)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.support.v7.view.menu.ActionMenuItemView.onClick(ActionMenuItemView.java:151)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.view.View.performClick(View.java:6294)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.view.View$PerformClick.run(View.java:24770)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:790)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:99)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:164)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6494)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
-11-19 12:16:50.840 14945 14945 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
-11-19 12:16:50.844  1422  2924 W audio_hw_generic: Not supplying enough data to HAL, expected position 95419709 , only wrote 95419440
+11-19 14:21:17.855  3159  3159 D KeyguardUpdateMonitor: received broadcast android.intent.action.BATTERY_CHANGED
+11-19 14:21:17.855  3159  3159 D KeyguardUpdateMonitor: handleBatteryUpdate
+11-19 14:21:17.857  2852  2852 D SamsungPhoneWindowManager: ACTION_BATTERY_CHANGED - Level :: 5, battStatus :: 2
+11-19 14:21:17.860  3159  3159 D PowerUI : showing power sharing dialogfalse
+11-19 14:21:17.860  3159  3159 D PowerUI : priorPlugType = 2 mPlugType =  2
+11-19 14:21:17.860  3159  3159 D PowerUI.Notification: Charging estimate time is not supported and connected cable is not a fast/slow charger, so return!
+11-19 14:21:17.864  5538  5538 I BatteryStatsService: Received action:android.intent.action.BATTERY_CHANGED
+11-19 14:21:17.866  3159  3159 D BatteryMeterDrawable: isSomethingChanged - false
+11-19 14:21:17.867  3159  3159 D BatteryMeterDrawable: isSomethingChanged - false
+11-19 14:21:17.867  3159  3159 D BatteryController: onReceive - ACTION_BATTERY_CHANGED : mLevel = 5
+11-19 14:21:17.869  5538  5538 W ProxyBase: Invoke setBatteryStateLocked failed!
+11-19 14:21:17.869  5538  5538 W ProxyBase: java.lang.NoSuchMethodException: setBatteryStateLocked [int, int, int, int, int, int, int, int]
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at java.lang.Class.getMethod(Class.java:1981)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at java.lang.Class.getMethod(Class.java:1637)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.pocketgeek.diagnostic.data.proxy.ProxyBase.a(ProxyBase.java:37)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.pocketgeek.diagnostic.data.proxy.ProxyBase.b(ProxyBase.java:73)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.pocketgeek.diagnostic.data.proxy.ProxyBase.b(ProxyBase.java:87)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.pocketgeek.diagnostic.data.proxy.uid.SamsungNougatBatteryStatsProxy.setBatteryState(SamsungNougatBatteryStatsProxy.java:40)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.pocketgeek.diagnostic.service.BatteryStatsService.a(BatteryStatsService.java:413)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.pocketgeek.diagnostic.service.BatteryStatsService.a(BatteryStatsService.java:58)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.pocketgeek.diagnostic.service.BatteryStatsService$5.onReceive(BatteryStatsService.java:523)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at android.app.LoadedApk$ReceiverDispatcher$Args.run(LoadedApk.java:1185)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at android.os.Handler.handleCallback(Handler.java:751)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at android.os.Handler.dispatchMessage(Handler.java:95)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at android.os.Looper.loop(Looper.java:154)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at android.app.ActivityThread.main(ActivityThread.java:6776)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at java.lang.reflect.Method.invoke(Native Method)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1518)
+11-19 14:21:17.869  5538  5538 W ProxyBase: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1408)
+11-19 14:21:17.891  5504 20236 I BatteryChangedService: Running battery changed service
+11-19 14:21:17.894  5504 20236 I BatteryChangedService: Battery intent extras:
+11-19 14:21:17.895  5504 20236 I BatteryChangedService:  - misc_event=0 (Integer)
+11-19 14:21:17.895  5504 20236 I BatteryChangedService:  - technology=Li-ion (String)
+11-19 14:21:17.895  5504 20236 I BatteryChangedService:  - icon-small=17303713 (Integer)
+11-19 14:21:17.895  5504 20236 I BatteryChangedService:  - max_charging_voltage=0 (Integer)
+11-19 14:21:17.895  5504 20236 I BatteryChangedService:  - health=2 (Integer)
+11-19 14:21:17.895  5504 20236 I BatteryChangedService:  - max_charging_current=0 (Integer)
+11-19 14:21:17.895  5504 20236 I BatteryChangedService:  - online=4 (Integer)
+11-19 14:21:17.896  5504 20236 I BatteryChangedService:  - status=2 (Integer)
+11-19 14:21:17.896  5504 20236 I BatteryChangedService:  - plugged=2 (Integer)
+11-19 14:21:17.896  5504 20236 I BatteryChangedService:  - present=true (Boolean)
+11-19 14:21:17.896  5504 20236 I BatteryChangedService:  - pogo_plugged=0 (Integer)
+11-19 14:21:17.896  5504 20236 I BatteryChangedService:  - capacity=280000 (Integer)
+11-19 14:21:17.896  5504 20236 I BatteryChangedService:  - charge_counter=0 (Integer)
+11-19 14:21:17.896  5504 20236 I BatteryChangedService:  - level=5 (Integer)
+11-19 14:21:17.897  5504 20236 I BatteryChangedService:  - scale=100 (Integer)
+11-19 14:21:17.897  5504 20236 I BatteryChangedService:  - temperature=299 (Integer)
+11-19 14:21:17.897  5504 20236 I BatteryChangedService:  - current_now=430 (Integer)
+11-19 14:21:17.897  5504 20236 I BatteryChangedService:  - voltage=3795 (Integer)
+11-19 14:21:17.897  5504 20236 I BatteryChangedService:  - charge_type=1 (Integer)
+11-19 14:21:17.897  5504 20236 I BatteryChangedService:  - self_discharging=false (Boolean)
+11-19 14:21:17.897  5504 20236 I BatteryChangedService:  - hv_charger=false (Boolean)
+11-19 14:21:17.898  5504 20236 I BatteryChangedService:  - power_sharing=false (Boolean)
+11-19 14:21:17.898  5504 20236 I BatteryChangedService:  - android.support.content.wakelockid=163 (Integer)
+11-19 14:21:17.898  5504 20236 I BatteryChangedService:  - invalid_charger=0 (Integer)
+11-19 14:21:17.910  2334  2334 I display : [PrimaryDisplay] [DYNAMIC_RECOMP] first frame after HWC_2_GLES
+11-19 14:21:17.910  2334  2334 I display : [PrimaryDisplay] [DYNAMIC_RECOMP] GLES_2_HWC by high FPS(5)
+11-19 14:21:18.172  2334  2363 I display : [PrimaryDisplay] [DYNAMIC_RECOMP] HWC_2_GLES by low FPS(0)
+11-19 14:21:18.449  2852  2852 D WifiTrafficPoller: notifyOnDataActivity() - mBusMaxLock.acquire()
+11-19 14:21:19.452  2852  2852 D WifiTrafficPoller: notifyOnDataActivity() - mBusMaxLock.acquire()
+11-19 14:21:19.968  2852  3036 D wifi    : onLinkStatsResults: radio_stat.on_time = 642743
+11-19 14:21:19.968  2852  3036 D wifi    : onLinkStatsResults: radio_stat.tx_time = 2694
+11-19 14:21:19.968  2852  3036 D wifi    : onLinkStatsResults: radio_stat.rx_time = 53841
+11-19 14:21:19.968  2852  3036 D wifi    : android_net_wifi_getLinkLayerStats: radio_stat.on_time = 642743
+11-19 14:21:19.968  2852  3036 D wifi    : android_net_wifi_getLinkLayerStats: radio_stat.tx_time = 2694
+11-19 14:21:19.968  2852  3036 D wifi    : android_net_wifi_getLinkLayerStats: radio_stat.rx_time = 53841
+11-19 14:21:19.976  2852  3036 D WifiStateMachine: Current network is: "Lithium" , ID is: 0
+11-19 14:21:19.976  2852  3036 D WifiStateMachine: Current network is still qualified due to heavy traffic, txSuccessRate=2.896709364672512 rxSuccessRate=13.473200241436386
+11-19 14:21:19.976  2852  3036 D WifiStateMachine: Heavy traffic on current network (txSuccessRate=2.896709364672512 rxSuccessRate=13.473200241436386), bail out...
+11-19 14:21:20.436  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.436  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.437  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.438  6831  6843 D ScanRecord: parseFromBytes
+11-19 14:21:20.438  6831  6843 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.447  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.447  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.448  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.448  6831  6842 D ScanRecord: parseFromBytes
+11-19 14:21:20.448  6831  6842 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.454  2852  2852 D WifiTrafficPoller: notifyOnDataActivity() - mBusMaxLock.acquire()
+11-19 14:21:20.478  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.478  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.479  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.479  6831  6843 D ScanRecord: parseFromBytes
+11-19 14:21:20.480  6831  6843 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.509  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.510  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.510  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.511  6831  6842 D ScanRecord: parseFromBytes
+11-19 14:21:20.511  6831  6842 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.514  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.514  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.515  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.515  6831  6843 D ScanRecord: parseFromBytes
+11-19 14:21:20.515  6831  6843 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.532  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.532  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.533  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.534  6831  6842 D ScanRecord: parseFromBytes
+11-19 14:21:20.534  6831  6842 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.539  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.539  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.540  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.541  6831  6843 D ScanRecord: parseFromBytes
+11-19 14:21:20.541  6831  6843 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.570  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.570  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.570  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.571  6831  6842 D ScanRecord: parseFromBytes
+11-19 14:21:20.571  6831  6842 D ScanRecord: first manudata for manu ID
+11-19 14:21:20.609  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:20.609  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:20.610  6831  6843 D ScanRecord: parseFromBytes
+11-19 14:21:20.853  5666  5702 I System.out: (HTTPLog)-Static: isSBSettingEnabled false
+11-19 14:21:20.854  5666  5702 I System.out: (HTTPLog)-Static: isSBSettingEnabled false
+11-19 14:21:20.856  2429  2906 D EnterpriseController: netId is 0
+11-19 14:21:20.857  2429  2906 D Netd    : getNetworkForDns: using netid 502 for uid 10022
+11-19 14:21:20.857  2429  2906 D DnsProxyListener: DNSDBG::dns addrinfo af 2
+11-19 14:21:21.097  5666  5702 I PlayCommon: [356] com.google.android.play.b.g.a(508): Successfully uploaded logs.
+11-19 14:21:21.372  2852  3110 D WifiWatchdogStateMachine:  [|212] [] []
+11-19 14:21:21.456  2852  2852 D WifiTrafficPoller: notifyOnDataActivity() - mBusMaxLock.acquire()
 --------- beginning of system
-11-19 12:16:50.844  1657  1669 W ActivityManager:   Force finishing activity com.naren.sarvajna/.ui.MainActivity
-11-19 12:16:50.850  1657  1673 I ActivityManager: Showing crash dialog for package com.naren.sarvajna u0
-11-19 12:16:50.874  1430  2635 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 3252224
-11-19 12:16:50.887  1430  2635 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 3252224
-11-19 12:16:50.889  1657  4140 I zygote  : android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
-11-19 12:16:50.893  1657  4140 I OpenGLRenderer: Initialized EGL, version 1.4
-11-19 12:16:50.893  1657  4140 D OpenGLRenderer: Swap behavior 1
-11-19 12:16:50.892  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 3252224
-11-19 12:16:50.894  1657  4140 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
-11-19 12:16:50.894  1657  4140 D OpenGLRenderer: Swap behavior 0
-11-19 12:16:50.899  1657  4140 D EGL_emulation: eglCreateContext: 0xe76acb20: maj 3 min 0 rcv 3
-11-19 12:16:50.904  1657  4140 D EGL_emulation: eglMakeCurrent: 0xe76acb20: ver 3 0 (tinfo 0xe5f957d0)
-11-19 12:16:50.932  1657  4140 D EGL_emulation: eglMakeCurrent: 0xe76acb20: ver 3 0 (tinfo 0xe5f957d0)
-11-19 12:16:51.106  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 2076672
-11-19 12:16:51.150  1657  1673 W Looper  : Dispatch took 234ms on android.ui, h=Handler (android.view.Choreographer$FrameHandler) {a1174a6} cb=android.view.Choreographer$FrameDisplayEventReceiver@95d6ee7 msg=0
-11-19 12:16:51.348  1657  1672 W ActivityManager: Activity pause timeout for ActivityRecord{be788f0 u0 com.naren.sarvajna/.ui.MainActivity t437 f}
-11-19 12:16:51.425  2168  2630 W GCoreFlp: No location to return for getLastLocation()
-11-19 12:16:51.430  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:51.437  1430  1430 I chatty  : uid=1000(system) allocator@2.0-s identical 1 line
-11-19 12:16:51.444  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:51.455  1440  1440 D SurfaceFlinger: duplicate layer name: changing com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity to com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1
-11-19 12:16:51.459  2289  3315 D EGL_emulation: eglMakeCurrent: 0xcfef16e0: ver 3 0 (tinfo 0xe4d33bf0)
-11-19 12:16:51.475  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:51.484  1430  2635 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:51.492  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:51.509  2229  2386 D EGL_emulation: eglMakeCurrent: 0xe79855a0: ver 3 0 (tinfo 0xe7983410)
-11-19 12:16:51.532  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:51.540  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:51.578  2289  2289 W SessionLifecycleManager: Handover failed. Creating new session controller.
-11-19 12:16:51.580  2289  2289 I OptInState: There is a new client and it does not support opt-in. Dropping request.
-11-19 12:16:51.591  1657  3880 I WifiService: getConnectionInfo uid=10032
-11-19 12:16:51.592  1657  3174 I WifiService: getWifiEnabledState uid=10032
-11-19 12:16:51.592  2289 14791 W Settings: Setting mobile_data has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
-11-19 12:16:51.596  2289 14975 W LocationOracle: No location history returned by ContextManager
-11-19 12:16:51.602  1657  3174 I WifiService: getConnectionInfo uid=10032
-11-19 12:16:51.605  1657  3174 I WifiService: getWifiEnabledState uid=10032
-11-19 12:16:51.605  2289 14789 W Settings: Setting mobile_data has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
-11-19 12:16:51.633  2168 14897 W ctxmgr  : [AclManager]No 3 for (accnt=account#-517948760#, com.google.android.gms(10013):UserVelocityProducer, vrsn=12521024, 0, 3pPkg = null ,  3pMdlId = null ,  pid = 2168). Was: 3 for 1, account#-517948760#
-11-19 12:16:51.662  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:51.668  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:51.682  2168  2168 I GeofencerStateMachine: removeGeofences: removeRequest=RemoveGeofencingRequest[REMOVE_BY_PENDING_INTENT pendingIntent=PendingIntent[creatorPackage=com.google.android.gms], packageName=null]
-11-19 12:16:51.685  2168  2168 I GeofencerStateMachine: removeGeofences: removeRequest=RemoveGeofencingRequest[REMOVE_BY_PENDING_INTENT pendingIntent=PendingIntent[creatorPackage=com.google.android.gms], packageName=null]
-11-19 12:16:51.694  2168 14990 I PlaceInferenceEngine: [anon] Changed inference mode: 0
-11-19 12:16:51.785  2168 14990 I Places  : ?: PlacesBleScanner start() with priority 2
-11-19 12:16:51.785  2168 14990 I PlaceInferenceEngine: [anon] Changed inference mode: 1
-11-19 12:16:51.797  2168 14990 I Places  : Converted 0 out of 1 WiFi scans
-11-19 12:16:51.797  1657  1798 I WifiService: getConnectionInfo uid=10013
-11-19 12:16:51.853  2168  2168 E BeaconBle: Missing BluetoothAdapter
-11-19 12:16:51.853  2168  2168 I BeaconBle: BLE 'KK+' software access layer enabled
-11-19 12:16:51.871  2168  2168 I BeaconBle: Client requested scan, settings=BleSettings [scanMode=ZERO_POWER, callbackType=ALL_MATCHES, reportDelayMillis=0, 1 filters, 0 clients, callingClientName=Places]
-11-19 12:16:51.872  2168  2168 I BeaconBle: Scan : No clients left, canceling alarm.
-11-19 12:16:51.872  2168  2168 E BeaconBle: Scan couldn't start for Places
-11-19 12:16:51.872  2168  2168 W Places  : BLE failure while scanning - code 5
-11-19 12:16:51.883  2168 12973 I PlaceInferenceEngine: No beacon scan available - ignoring candidates.
-11-19 12:16:51.923  2168 14897 W ctxmgr  : [AclManager]No 2 for (accnt=account#-517948760#, com.google.android.gms(10013):PlacesProducer, vrsn=12521000, 0, 3pPkg = null ,  3pMdlId = null ,  pid = 2168). Was: 3 for 18, account#-517948760#
-11-19 12:16:52.019  2229  2386 W OpenGLRenderer: Incorrectly called buildLayer on View: ShortcutAndWidgetContainer, destroying layer...
-11-19 12:16:52.656  1657  1669 I ActivityManager: Killing 14945:com.naren.sarvajna/u0a103 (adj 900): crash
-11-19 12:16:52.662  1657  1674 W zygote  : kill(-14945, 9) failed: No such process
-11-19 12:16:52.683  1657  4140 D EGL_emulation: eglMakeCurrent: 0xe76acb20: ver 3 0 (tinfo 0xe5f957d0)
-11-19 12:16:52.689  1657  1669 I ActivityManager: START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10300000 cmp=com.naren.sarvajna/.ui.MainActivity} from uid 10023
-11-19 12:16:52.706  1657  1674 W zygote  : kill(-14945, 9) failed: No such process
-11-19 12:16:52.712  1657  3174 E ActivityManager: applyOptionsLocked: Unknown animationType=0
-11-19 12:16:52.724  1657  3174 I ActivityManager: Start proc 14992:com.naren.sarvajna/u0a103 for activity com.naren.sarvajna/.ui.MainActivity
-11-19 12:16:52.725 14992 14992 I zygote  : Not late-enabling -Xcheck:jni (already on)
-11-19 12:16:52.734 14992 14992 W zygote  : Unexpected CPU variant for X86 using defaults: x86
-11-19 12:16:52.751  1657  1674 W zygote  : kill(-14945, 9) failed: No such process
-11-19 12:16:52.751  1657  1674 I zygote  : Successfully killed process cgroup uid 10103 pid 14945 in 89ms
-11-19 12:16:52.752 14992 14999 E zygote  : Failed sending reply to debugger: Broken pipe
-11-19 12:16:52.752 14992 14999 I zygote  : Debugger is no longer active
-11-19 12:16:52.761  1657  1679 W ActivityManager: setHasOverlayUi called on unknown pid: 14945
-11-19 12:16:52.772  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:52.817  2289  3315 D EGL_emulation: eglMakeCurrent: 0xcfef16e0: ver 3 0 (tinfo 0xe4d33bf0)
-11-19 12:16:52.819  2229  2386 D EGL_emulation: eglMakeCurrent: 0xe79855a0: ver 3 0 (tinfo 0xe7983410)
-11-19 12:16:52.833  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:52.900  1773  2026 I chatty  : uid=10030(com.android.systemui) RenderThread identical 6 lines
-11-19 12:16:52.912  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:52.913 14992 14992 I InstantRun: starting instant run server: is main process
-11-19 12:16:52.918  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:52.923  1657  1705 W AppOps  : Finishing op nesting under-run: uid 1000 pkg android code 24 time=0 duration=0 nesting=0
-11-19 12:16:52.970  1773  2026 I chatty  : uid=10030(com.android.systemui) RenderThread identical 6 lines
-11-19 12:16:52.985  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:53.051 14992 14992 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<android.support.v4.view.ViewCompat$OnUnhandledKeyEventListenerWrapper>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/view/View$OnUnhandledKeyEventListener;
-11-19 12:16:53.051 14992 14992 I zygote  :   at void android.support.v4.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2341)
-11-19 12:16:53.051 14992 14992 I zygote  :   at void android.support.v7.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:62)
-11-19 12:16:53.051 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
-11-19 12:16:53.052 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
-11-19 12:16:53.052 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
-11-19 12:16:53.052 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
-11-19 12:16:53.052 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
-11-19 12:16:53.052 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
-11-19 12:16:53.052 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
-11-19 12:16:53.052 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
-11-19 12:16:53.052 14992 14992 I zygote  :   at android.view.ViewGroup android.support.v7.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:607)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:518)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:466)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:140)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void com.naren.sarvajna.ui.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:36)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7009)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7000)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1214)
-11-19 12:16:53.052 14992 14992 I zygote  :   at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2731)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2856)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1589)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
-11-19 12:16:53.052 14992 14992 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
-11-19 12:16:53.052 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
-11-19 12:16:53.053 14992 14992 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "android.view.View$OnUnhandledKeyEventListener" on path: DexPathList[[zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/base.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_dependencies_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_resources_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_0_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_1_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_2_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_3_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_4_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_5_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_li
-11-19 12:16:53.053 14992 14992 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
-11-19 12:16:53.053 14992 14992 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
-11-19 12:16:53.053 14992 14992 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.support.v4.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2341)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.support.v7.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:62)
-11-19 12:16:53.053 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
-11-19 12:16:53.053 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
-11-19 12:16:53.053 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
-11-19 12:16:53.053 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
-11-19 12:16:53.053 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
-11-19 12:16:53.053 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
-11-19 12:16:53.053 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
-11-19 12:16:53.053 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
-11-19 12:16:53.053 14992 14992 I zygote  :   at android.view.ViewGroup android.support.v7.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:607)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:518)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:466)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:140)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void com.naren.sarvajna.ui.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:36)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7009)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7000)
-11-19 12:16:53.053 14992 14992 I zygote  :   at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1214)
-11-19 12:16:53.054 14992 14992 I zygote  :   at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2731)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2856)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1589)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
-11-19 12:16:53.054 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
-11-19 12:16:53.054 14992 14992 I zygote  : 
-11-19 12:16:53.054 14992 14992 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<android.support.v4.view.ViewCompat$OnUnhandledKeyEventListenerWrapper>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/view/View$OnUnhandledKeyEventListener;
-11-19 12:16:53.054 14992 14992 I zygote  :   at void android.support.v4.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2341)
-11-19 12:16:53.054 14992 14992 I zygote  :   at void android.support.v7.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:62)
-11-19 12:16:53.055 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
-11-19 12:16:53.055 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
-11-19 12:16:53.055 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
-11-19 12:16:53.055 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
-11-19 12:16:53.055 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
-11-19 12:16:53.055 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
-11-19 12:16:53.055 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
-11-19 12:16:53.055 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
-11-19 12:16:53.055 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
-11-19 12:16:53.055 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
-11-19 12:16:53.055 14992 14992 I zygote  :   at android.view.ViewGroup android.support.v7.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:607)
-11-19 12:16:53.055 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:518)
-11-19 12:16:53.055 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:466)
-11-19 12:16:53.055 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:140)
-11-19 12:16:53.055 14992 14992 I zygote  :   at void com.naren.sarvajna.ui.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:36)
-11-19 12:16:53.055 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7009)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7000)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1214)
-11-19 12:16:53.056 14992 14992 I zygote  :   at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2731)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2856)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1589)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
-11-19 12:16:53.056 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
-11-19 12:16:53.056 14992 14992 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "android.view.View$OnUnhandledKeyEventListener" on path: DexPathList[[zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/base.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_dependencies_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_resources_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_0_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_1_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_2_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_3_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_4_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_5_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_li
-11-19 12:16:53.056 14992 14992 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
-11-19 12:16:53.056 14992 14992 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
-11-19 12:16:53.056 14992 14992 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.support.v4.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2341)
-11-19 12:16:53.056 14992 14992 I zygote  :   at void android.support.v7.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:62)
-11-19 12:16:53.056 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
-11-19 12:16:53.056 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
-11-19 12:16:53.056 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
-11-19 12:16:53.056 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
-11-19 12:16:53.057 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
-11-19 12:16:53.057 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
-11-19 12:16:53.057 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
-11-19 12:16:53.057 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
-11-19 12:16:53.057 14992 14992 I zygote  :   at android.view.ViewGroup android.support.v7.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:607)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:518)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:466)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:140)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void com.naren.sarvajna.ui.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:36)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7009)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7000)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1214)
-11-19 12:16:53.057 14992 14992 I zygote  :   at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2731)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2856)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1589)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
-11-19 12:16:53.057 14992 14992 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
-11-19 12:16:53.058 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
-11-19 12:16:53.058 14992 14992 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
-11-19 12:16:53.058 14992 14992 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
-11-19 12:16:53.058 14992 14992 I zygote  : 
-11-19 12:16:53.058 14992 14992 I zygote  : Rejecting re-init on previously-failed class java.lang.Class<android.support.v4.view.ViewCompat$OnUnhandledKeyEventListenerWrapper>: java.lang.NoClassDefFoundError: Failed resolution of: Landroid/view/View$OnUnhandledKeyEventListener;
-11-19 12:16:53.058 14992 14992 I zygote  :   at void android.support.v4.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2341)
-11-19 12:16:53.058 14992 14992 I zygote  :   at void android.support.v7.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:62)
-11-19 12:16:53.058 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
-11-19 12:16:53.059 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
-11-19 12:16:53.059 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
-11-19 12:16:53.059 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
-11-19 12:16:53.060 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
-11-19 12:16:53.060 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
-11-19 12:16:53.060 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
-11-19 12:16:53.060 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
-11-19 12:16:53.060 14992 14992 I zygote  :   at android.view.ViewGroup android.support.v7.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:607)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:518)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:466)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:140)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void com.naren.sarvajna.ui.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:36)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7009)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7000)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1214)
-11-19 12:16:53.060 14992 14992 I zygote  :   at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2731)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2856)
-11-19 12:16:53.060 14992 14992 I zygote  :   at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
-11-19 12:16:53.061 14992 14992 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1589)
-11-19 12:16:53.061 14992 14992 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
-11-19 12:16:53.061 14992 14992 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
-11-19 12:16:53.061 14992 14992 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
-11-19 12:16:53.061 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
-11-19 12:16:53.061 14992 14992 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
-11-19 12:16:53.061 14992 14992 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
-11-19 12:16:53.061 14992 14992 I zygote  : Caused by: java.lang.ClassNotFoundException: Didn't find class "android.view.View$OnUnhandledKeyEventListener" on path: DexPathList[[zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/base.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_dependencies_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_resources_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_0_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_1_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_2_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_3_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_4_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_lib_slice_5_apk.apk", zip file "/data/app/com.naren.sarvajna-7jP7YPUa5-L0uPszwmOYrA==/split_li
-11-19 12:16:53.061 14992 14992 I zygote  :   at java.lang.Class dalvik.system.BaseDexClassLoader.findClass(java.lang.String) (BaseDexClassLoader.java:125)
-11-19 12:16:53.061 14992 14992 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String, boolean) (ClassLoader.java:379)
-11-19 12:16:53.061 14992 14992 I zygote  :   at java.lang.Class java.lang.ClassLoader.loadClass(java.lang.String) (ClassLoader.java:312)
-11-19 12:16:53.061 14992 14992 I zygote  :   at void android.support.v4.view.ViewCompat.setBackground(android.view.View, android.graphics.drawable.Drawable) (ViewCompat.java:2341)
-11-19 12:16:53.062 14992 14992 I zygote  :   at void android.support.v7.widget.ActionBarContainer.<init>(android.content.Context, android.util.AttributeSet) (ActionBarContainer.java:62)
-11-19 12:16:53.062 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance0(java.lang.Object[]) (Constructor.java:-2)
-11-19 12:16:53.062 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Constructor.newInstance(java.lang.Object[]) (Constructor.java:334)
-11-19 12:16:53.062 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createView(java.lang.String, java.lang.String, android.util.AttributeSet) (LayoutInflater.java:647)
-11-19 12:16:53.062 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:790)
-11-19 12:16:53.062 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.createViewFromTag(android.view.View, java.lang.String, android.content.Context, android.util.AttributeSet) (LayoutInflater.java:730)
-11-19 12:16:53.062 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflate(org.xmlpull.v1.XmlPullParser, android.view.View, android.content.Context, android.util.AttributeSet, boolean) (LayoutInflater.java:863)
-11-19 12:16:53.062 14992 14992 I zygote  :   at void android.view.LayoutInflater.rInflateChildren(org.xmlpull.v1.XmlPullParser, android.view.View, android.util.AttributeSet, boolean) (LayoutInflater.java:824)
-11-19 12:16:53.062 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(org.xmlpull.v1.XmlPullParser, android.view.ViewGroup, boolean) (LayoutInflater.java:515)
-11-19 12:16:53.062 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup, boolean) (LayoutInflater.java:423)
-11-19 12:16:53.062 14992 14992 I zygote  :   at android.view.View android.view.LayoutInflater.inflate(int, android.view.ViewGroup) (LayoutInflater.java:374)
-11-19 12:16:53.062 14992 14992 I zygote  :   at android.view.ViewGroup android.support.v7.app.AppCompatDelegateImpl.createSubDecor() (AppCompatDelegateImpl.java:607)
-11-19 12:16:53.062 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.ensureSubDecor() (AppCompatDelegateImpl.java:518)
-11-19 12:16:53.062 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatDelegateImpl.setContentView(int) (AppCompatDelegateImpl.java:466)
-11-19 12:16:53.062 14992 14992 I zygote  :   at void android.support.v7.app.AppCompatActivity.setContentView(int) (AppCompatActivity.java:140)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void com.naren.sarvajna.ui.MainActivity.onCreate(android.os.Bundle) (MainActivity.kt:36)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle, android.os.PersistableBundle) (Activity.java:7009)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.app.Activity.performCreate(android.os.Bundle) (Activity.java:7000)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.app.Instrumentation.callActivityOnCreate(android.app.Activity, android.os.Bundle) (Instrumentation.java:1214)
-11-19 12:16:53.063 14992 14992 I zygote  :   at android.app.Activity android.app.ActivityThread.performLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent) (ActivityThread.java:2731)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.app.ActivityThread.handleLaunchActivity(android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:2856)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.app.ActivityThread.-wrap11(android.app.ActivityThread, android.app.ActivityThread$ActivityClientRecord, android.content.Intent, java.lang.String) (ActivityThread.java:-1)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.app.ActivityThread$H.handleMessage(android.os.Message) (ActivityThread.java:1589)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.os.Handler.dispatchMessage(android.os.Message) (Handler.java:106)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.os.Looper.loop() (Looper.java:164)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void android.app.ActivityThread.main(java.lang.String[]) (ActivityThread.java:6494)
-11-19 12:16:53.063 14992 14992 I zygote  :   at java.lang.Object java.lang.reflect.Method.invoke(java.lang.Object, java.lang.Object[]) (Method.java:-2)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run() (RuntimeInit.java:438)
-11-19 12:16:53.063 14992 14992 I zygote  :   at void com.android.internal.os.ZygoteInit.main(java.lang.String[]) (ZygoteInit.java:807)
-11-19 12:16:53.063 14992 14992 I zygote  : 
-11-19 12:16:53.213  1440  1960 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-11-19 12:16:53.215 14992 15014 D OpenGLRenderer: HWUI GL Pipeline
-11-19 12:16:53.257  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:53.258 14992 15014 D         : HostConnection::get() New Host Connection established 0xe4d29740, tid 15014
-11-19 12:16:53.262 14992 15014 I zygote  : android::hardware::configstore::V1_0::ISurfaceFlingerConfigs::hasWideColorDisplay retrieved: 0
-11-19 12:16:53.262 14992 15014 I OpenGLRenderer: Initialized EGL, version 1.4
-11-19 12:16:53.262 14992 15014 D OpenGLRenderer: Swap behavior 1
-11-19 12:16:53.262 14992 15014 W OpenGLRenderer: Failed to choose config with EGL_SWAP_BEHAVIOR_PRESERVED, retrying without...
-11-19 12:16:53.262 14992 15014 D OpenGLRenderer: Swap behavior 0
-11-19 12:16:53.267 14992 15014 D EGL_emulation: eglCreateContext: 0xe79853c0: maj 3 min 0 rcv 3
-11-19 12:16:53.267  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:53.282 14992 15014 D EGL_emulation: eglMakeCurrent: 0xe79853c0: ver 3 0 (tinfo 0xe7983670)
-11-19 12:16:53.282  1430  1430 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 8298496
-11-19 12:16:53.286  1440  1466 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-11-19 12:16:53.335  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:53.340  1773  2026 D EGL_emulation: eglMakeCurrent: 0xe79856c0: ver 3 0 (tinfo 0xe7983630)
-11-19 12:16:53.545 14992 14997 I zygote  : Do partial code cache collection, code=20KB, data=30KB
-11-19 12:16:53.546 14992 14997 I zygote  : After code cache collection, code=20KB, data=30KB
-11-19 12:16:53.546 14992 14997 I zygote  : Increasing code cache capacity to 128KB
-11-19 12:16:53.547 14992 14997 I zygote  : Do partial code cache collection, code=20KB, data=47KB
-11-19 12:16:53.547 14992 14997 I zygote  : After code cache collection, code=20KB, data=47KB
-11-19 12:16:53.547 14992 14997 I zygote  : Increasing code cache capacity to 256KB
-11-19 12:16:53.547 14992 14997 I zygote  : JIT allocated 71KB for compiled code of void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
-11-19 12:16:53.547 14992 14997 I zygote  : Compiler allocated 4MB to compile void android.widget.TextView.<init>(android.content.Context, android.util.AttributeSet, int, int)
-11-19 12:16:53.548 14992 15014 D EGL_emulation: eglMakeCurrent: 0xe79853c0: ver 3 0 (tinfo 0xe7983670)
-11-19 12:16:53.580 14992 14997 I zygote  : Do full code cache collection, code=93KB, data=56KB
-11-19 12:16:53.581 14992 14997 I zygote  : After code cache collection, code=73KB, data=35KB
-11-19 12:16:53.653  1657  1679 I ActivityManager: Displayed com.naren.sarvajna/.ui.MainActivity: +937ms
-11-19 12:16:53.732  1440  1440 W SurfaceFlinger: couldn't log to binary event log: overflow.
-11-19 12:16:53.809  2289 14789 I PBSessionCacheImpl: Deleted sessionId[427742960532] from persistence.
-11-19 12:16:53.815  2289  2289 W SearchService: Abort, client detached.
+11-19 14:21:21.547  3662  3662 D io_stats: !@ 179,0 r 133954 4632498 w 51138 793116 d 7661 184492 f 20903 20900 iot 104550 97721 th 51200 0 0 pt 0 inp 0 0 1288.285
+11-19 14:21:22.459  2852  2852 D WifiTrafficPoller: notifyOnDataActivity() - mBusMaxLock.acquire()
+11-19 14:21:22.622  5666  5688 I Finsky  : [345] com.google.android.finsky.bp.am.run(6): Stats for Executor: Db-user_languages_store com.google.android.finsky.bp.an@c44fdd9[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 1]
+11-19 14:21:22.980  2852  2995 D InputReader: Input event(2): value=1 when=1289720142000
+11-19 14:21:22.981  2852  2995 D InputReader: Input event(2): value=1 when=1289720142000
+11-19 14:21:22.981  2852  2995 I InputReader: Touch event's action is 0x0 (deviceType=0) [pCnt=1, s=0.121 ] when=1289720142000
+11-19 14:21:22.981  2852  2994 I InputDispatcher: Delivering touch to (3159): action: 0x4, toolType: 1
+11-19 14:21:22.981  2852  2994 I InputDispatcher: Delivering touch to (2852): action: 0x0, toolType: 1
+11-19 14:21:22.982  2852  2994 D PowerManagerService: [s] UserActivityState : 4 -> 1
+11-19 14:21:22.983  2852  2994 D PowerManagerService: mDisplayReady: false
+11-19 14:21:22.983  2852  2920 D DisplayPowerController: animateScreenStateChange[0]: target=2
+11-19 14:21:22.983  2852  2920 D DisplayPowerController: [Dual Screen Compatible] state[0] :2
+11-19 14:21:22.983  2852  2920 D AutomaticBrightnessController: [DAB] mLightSensor is null.
+11-19 14:21:22.983  2852  2920 D DisplayPowerController: getFinalBrightness : Summary is 32 -> 32
+11-19 14:21:22.983  2852  2920 D DisplayPowerController: Animating brightness: target=32, rate=2000 (PSM:false, AB limit:(-1 ~ -1) MB Limit:(-1 ~ -1))
+11-19 14:21:22.983  2852  2897 D ViewRootImpl@23b2a42[sarvajna]: ViewPostImeInputStage processPointer 0
+11-19 14:21:22.984  2852  2920 D PowerManagerService: [s] DisplayPowerCallbacks : onStateChanged()
+11-19 14:21:22.984  2852  2920 D PowerManagerService: mDisplayReady: true
+11-19 14:21:22.990  2852  2920 D DisplayPowerController: animateScreenStateChange[0]: target=2
+11-19 14:21:22.990  2852  3136 D lights  : lcd : 32 +
+11-19 14:21:22.990  2852  2920 D DisplayPowerController: [Dual Screen Compatible] state[0] :2
+11-19 14:21:22.990  2852  2920 D AutomaticBrightnessController: [DAB] mLightSensor is null.
+11-19 14:21:22.990  2852  2920 D DisplayPowerController: getFinalBrightness : Summary is 32 -> 32
+11-19 14:21:22.990  2852  2920 D DisplayPowerController: Animating brightness: target=32, rate=2000 (PSM:false, AB limit:(-1 ~ -1) MB Limit:(-1 ~ -1))
+11-19 14:21:22.997  2852  3036 D wifi    : onLinkStatsResults: radio_stat.on_time = 643990
+11-19 14:21:22.997  2852  3036 D wifi    : onLinkStatsResults: radio_stat.tx_time = 2700
+11-19 14:21:22.997  2852  3036 D wifi    : onLinkStatsResults: radio_stat.rx_time = 53897
+11-19 14:21:22.997  2852  3036 D wifi    : android_net_wifi_getLinkLayerStats: radio_stat.on_time = 643990
+11-19 14:21:22.997  2852  3036 D wifi    : android_net_wifi_getLinkLayerStats: radio_stat.tx_time = 2700
+11-19 14:21:22.997  2852  3036 D wifi    : android_net_wifi_getLinkLayerStats: radio_stat.rx_time = 53897
+11-19 14:21:23.001  2852  3036 D WifiStateMachine: Current network is: "Lithium" , ID is: 0
+11-19 14:21:23.001  2852  3036 D WifiStateMachine: Current network is still qualified due to heavy traffic, txSuccessRate=11.448354682336255 rxSuccessRate=20.236600120718194
+11-19 14:21:23.001  2852  3036 D WifiStateMachine: Heavy traffic on current network (txSuccessRate=11.448354682336255 rxSuccessRate=20.236600120718194), bail out...
+11-19 14:21:23.007  2334  2334 I display : [PrimaryDisplay] [DYNAMIC_RECOMP] first frame after HWC_2_GLES
+11-19 14:21:23.007  2334  2334 I display : [PrimaryDisplay] [DYNAMIC_RECOMP] GLES_2_HWC by high FPS(5)
+11-19 14:21:23.023  2852  3136 D lights  : lcd : 32 -
+11-19 14:21:23.044  2852  2995 D InputReader: Input event(2): value=0 when=1289784206000
+11-19 14:21:23.044  2852  2995 D InputReader: Input event(2): value=0 when=1289784206000
+11-19 14:21:23.045  2852  2995 I InputReader: Touch event's action is 0x1 (deviceType=0) [pCnt=1, s=] when=1289784206000
+11-19 14:21:23.045  2852  2994 I InputDispatcher: Delivering touch to (2852): action: 0x1, toolType: 1
+11-19 14:21:23.045  2852  2897 D ViewRootImpl@23b2a42[sarvajna]: ViewPostImeInputStage processPointer 1
+11-19 14:21:23.046  2852  3415 I ActivityManager: Killing 19820:com.naren.sarvajna/u0a106 (adj 906): crash
+11-19 14:21:23.047  2852  3415 D ActivityManager: cleanUpApplicationRecord -- 19820
+11-19 14:21:23.053  2852  3415 I ActivityManager: START u0 {act=android.intent.action.MAIN typ=null flg=0x10000000 cmp=ComponentInfo{com.naren.sarvajna/com.naren.sarvajna.ui.MainActivity}} from uid 2000 on display 0
+11-19 14:21:23.054  2852  2897 D ViewRootImpl@23b2a42[sarvajna]: mHardwareRenderer.destroy()#4
+11-19 14:21:23.054  2852  2897 D ViewRootImpl@23b2a42[sarvajna]: dispatchDetachedFromWindow
+11-19 14:21:23.054  2852  2897 D WindowManager: disposeInputChannel mInputChannel: 7501f90 Application Error: com.naren.sarvajna (server)
+11-19 14:21:23.055  2852  3415 D ActivityManager: ActivityRecord() Constructor : multiScreenAttrs=MultiScreenAttrs{mDisplayId=0, mBaseDisplayId=0, mBaseActivity=false}
+11-19 14:21:23.070  2852  3415 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1586000  uid : 1000  pid : 2852  pkgName : AMS_APP_SWITCH@CPU_MIN@15
+11-19 14:21:23.072  2852  3415 D ActivityManagerPerformance: AMP_acquire() APP_SWITCH
+11-19 14:21:23.074  2852  2897 D InputDispatcher: Focus left window: 2852
+11-19 14:21:23.074  2852  2897 D InputDispatcher: Focus entered window: 4124
+11-19 14:21:23.074  2852  2897 D InputTransport: Input channel destroyed: fd=476
+11-19 14:21:23.074  2852  2897 D InputTransport: Input channel destroyed: fd=478
+11-19 14:21:23.075  4124  4124 D ViewRootImpl@3072b6c[LauncherActivity]: MSG_WINDOW_FOCUS_CHANGED 1
+11-19 14:21:23.075  4124  4124 D ViewRootImpl@3072b6c[LauncherActivity]: mHardwareRenderer.initializeIfNeeded()#2 mSurface={isValid=true -967516160}
+11-19 14:21:23.076  2852  2897 D ViewRootImpl@2a89838[ContainerKeyguardScrim]: mHardwareRenderer.destroy()#1
+11-19 14:21:23.076  2852  3415 D ActivityManager: computeStackFocus: stackId=1
+11-19 14:21:23.076  2852  3415 D ActivityManager: computeStackFocus: New stack r=ActivityRecord{ce55621d0 u0 com.naren.sarvajna/.ui.MainActivity t-1} stackId=1
+11-19 14:21:23.076  2852  3415 D ActivityTrigger: Activity is Triggerred in full screen 
+11-19 14:21:23.079  2852  4053 D InputMethodManagerService: windowGainedFocus mCurrentFocusedUserId - 0 and mSecureKeypadEnabled-false
+11-19 14:21:23.079  2852  4053 W InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@64a64d2 attribute=null, token = android.os.BinderProxy@da6fe22
+11-19 14:21:23.079  2852  3415 D ActivityManager: moveToFront() : reason=startedActivity setFocusedActivity isAttached=true TaskRecord{a20335dd0 #1633 A=com.naren.sarvajna U=0 StackId=1 sz=1}
+11-19 14:21:23.080  2852  3415 D ActivityManager: setFocusStackUnchecked: reason=startedActivity setFocusedActivity focusCandidate=ActivityStack{97216ffd0 stackId=1, 2 tasks} caller=com.android.server.am.ActivityStack.moveToFront:883 com.android.server.am.ActivityStackSupervisor.moveActivityStackToFront:2050 
+11-19 14:21:23.081  2852  3415 D InputDispatcher: Focused application set to: xxxx
+11-19 14:21:23.083  2852  3415 D InputDispatcher: Focus left window: 4124
+11-19 14:21:23.085  2852  3415 D ActivityManager: resumeTopActivityInnerLocked() : #1 prevTask=TaskRecord{a20335dd0 #1633 A=com.naren.sarvajna U=0 StackId=1 sz=1} next=ActivityRecord{ce55621d0 u0 com.naren.sarvajna/.ui.MainActivity t1633} mFocusedStack=ActivityStack{97216ffd0 stackId=1, 2 tasks}
+11-19 14:21:23.085  2852  3415 D ActivityTrigger: ActivityTrigger activityPauseTrigger 
+11-19 14:21:23.088  3360  3371 D ForegroundUtils: could not check pending caller
+11-19 14:21:23.088  2852  2897 D WindowManager: set systemUiVisibility of statusbar : systemUiFlags= 0x708 fullscreenStackSysUiFlag= 0x0
+11-19 14:21:23.089  2852  2897 E ViewRootImpl: sendUserActionEvent() returned.
+11-19 14:21:23.091  4124  4124 V Launcher: Launcher.onPause()
+11-19 14:21:23.092  2852  2918 D WindowManager: addWindow: android.view.ViewRootImpl$W@4a787b8 displayId=0
+11-19 14:21:23.093  2852  2918 D InputTransport: Input channel constructed: fd=375
+11-19 14:21:23.093  2852  2918 D InputTransport: Input channel constructed: fd=381
+11-19 14:21:23.093  2852  2918 D WindowManager: openInputChannel mInputChannel: 6ff0991 Starting com.naren.sarvajna (server)
+11-19 14:21:23.094  2852  2918 D ViewRootImpl@1e1a1b[sarvajna]: setView = DecorView@6a770f6[sarvajna] touchMode=true
+11-19 14:21:23.096  2852  3031 D WindowManager: adjustSystemUiVisibilityLw : vis= 0x708
+11-19 14:21:23.096  2852  2918 D ViewRootImpl@1e1a1b[sarvajna]: dispatchAttachedToWindow
+11-19 14:21:23.097  2852  3425 D ActivityManager: clearAppIconInfo()
+11-19 14:21:23.097  2852  3425 D SamsungAnimationCreator: setAnimationTriggerActivity type 1
+11-19 14:21:23.097  2852  2918 V WindowManager: Relayout Window{6ff0991d0 u0 Starting com.naren.sarvajna}: viewVisibility=0 req=720x1232 WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=3 fl=#81830118 pfl=0x20011 wanim=0x1030391 vsysui=0x600 needsMenuKey=2 naviIconColor=0}
+11-19 14:21:23.097  2852  3425 D ActivityManager: resumeTopActivityInnerLocked() : #1 prevTask=TaskRecord{f078784d0 #1592 I=com.sec.android.app.launcher/com.android.launcher3.Launcher U=0 StackId=0 sz=1} next=ActivityRecord{ce55621d0 u0 com.naren.sarvajna/.ui.MainActivity t1633} mFocusedStack=ActivityStack{97216ffd0 stackId=1, 2 tasks}
+11-19 14:21:23.097  2334  2334 I SurfaceFlinger: id=105 createSurf (1x1),1 flag=404, Starting com.naren.sarvajna
+11-19 14:21:23.111  2852  3425 D ActivityManager: applyOptionsLocked(), pendingOptions : ActivityOptions(234503415), mPackageName=null, mAnimationType=0, mStartX=0, mStartY=0, mWidth=0, mHeight=0
+11-19 14:21:23.111  2852  3425 E ActivityManager: applyOptionsLocked: Unknown animationType=0
+11-19 14:21:23.112  2852  3425 D MountService: getExternalStorageMountMode : 1
+11-19 14:21:23.112  2852  3425 D MountService: getExternalStorageMountMode : 3
+11-19 14:21:23.113  2852  3425 D MountService: getExternalStorageMountMode : final mountMode=1, uid : 10106, packageName : com.naren.sarvajna
+11-19 14:21:23.113  2852  2918 D ViewRootImpl@1e1a1b[sarvajna]: Relayout returned: oldFrame=[0,0][0,0] newFrame=[0,0][720,1280] result=0x27 surface={isValid=true -1347442688} surfaceGenerationChanged=true
+11-19 14:21:23.121  2852  2918 D WindowManager: finishDrawingWindow: Window{6ff0991d0 u0 Starting com.naren.sarvajna} mDrawState=DRAW_PENDING
+11-19 14:21:23.126 20245 20245 E Zygote  : v2
+11-19 14:21:23.126 20245 20245 I libpersona: KNOX_SDCARD checking this for 10106
+11-19 14:21:23.126 20245 20245 I libpersona: KNOX_SDCARD not a persona
+11-19 14:21:23.127  2852  3425 I ActivityManager: Start proc 20245:com.naren.sarvajna/u0a106 for activity com.naren.sarvajna/.ui.MainActivity
+11-19 14:21:23.127 20245 20245 E Zygote  : accessInfo : 0
+11-19 14:21:23.128 20245 20245 W SELinux : SELinux selinux_android_compute_policy_index : Policy Index[2],  Con:u:r:zygote:s0 RAM:SEPF_SECMOBILE_7.0_0010, [-1 -1 -1 -1 0 1]
+11-19 14:21:23.129 20245 20245 I SELinux : SELinux: seapp_context_lookup: seinfo=untrusted, level=s0:c512,c768, pkgname=com.naren.sarvajna 
+11-19 14:21:23.129  4124  4124 D ViewRootImpl@3072b6c[LauncherActivity]: MSG_WINDOW_FOCUS_CHANGED 0
+11-19 14:21:23.132 20245 20245 I art     : Late-enabling -Xcheck:jni
+11-19 14:21:23.146  2852  3938 I ActivityManager: DSS on for com.naren.sarvajna and scale is 1.0
+11-19 14:21:23.148  2852  3938 V WindowOrientationListener: OrientationSensorJudge.getProposedRotation, Rotation: -1
+11-19 14:21:23.148  2852  3938 V WindowOrientationListener: OrientationSensorJudge.getProposedRotation, Rotation: -1
+11-19 14:21:23.148  2852  3938 V WindowManager: rotationForOrientationLw(orient=-1, last=0); user=0  sensorRotation=-1 mLidState=-1 mDockMode=0 mHdmiPlugged=false
+11-19 14:21:23.156  2852  3094 D GameManagerService: handleForegroundChange(). pkgName: com.naren.sarvajna, clsName: com.naren.sarvajna.ui.MainActivity,FgActivityName:com.naren.sarvajna/.ui.MainActivity
+11-19 14:21:23.156  2852  3938 D MARsPolicyManager: handlePackageResumedFG pkgName = com.naren.sarvajna, userId = 0
+11-19 14:21:23.156  2852  3094 D GameManagerService: there is not sem_perfomance_mode on setting
+11-19 14:21:23.156  2852  3094 D GameManagerService: notifyResumePause(). pkg: com.naren.sarvajna, type: 4, isMinimized: false, isTunableApp: false
+11-19 14:21:23.156  2852  3094 D GameManagerService:   notifyResumePause(). unexpected mPrevNotiType: -1
+11-19 14:21:23.161  2852  3938 D CHNLowEndSamsungAnimationCreator: createSamsungAnimation type/enter : 12/false
+11-19 14:21:23.161  2852  3938 D CHNLowEndSamsungAnimationCreator: createSamsungAnimation wallpaerXOffset : -280
+11-19 14:21:23.161  2852  3938 D CHNLowEndSamsungAnimationCreator: createSamsungAnimation isSplit/isFixedOrientation : false/false
+11-19 14:21:23.169  2852  5154 D GamePkgDataHelper: getGamePkgData(). com.naren.sarvajna
+11-19 14:21:23.170  2852  2897 D WindowManager: set systemUiVisibility of statusbar : systemUiFlags= 0x608 fullscreenStackSysUiFlag= 0x0
+11-19 14:21:23.170 10707 12569 I SAMSUNGPAY: [Hint_ProcessStatusChange] fg Change, pid : 20245 , isNotify : true , isForeground : true , fg list : [4124, 20245]
+11-19 14:21:23.170  3360  3372 D ForegroundUtils: could not check pending caller
+11-19 14:21:23.171 10707 11011 I SAMSUNGPAY: [Hint_cdg] ensureHomePackagesLoaded - already update, isHomePackageEmpty : false, isKnoxRunning : false
+11-19 14:21:23.171  2852  5154 D GameManagerService: identifyGamePackage. com.naren.sarvajna
+11-19 14:21:23.173 10707 11011 I SAMSUNGPAY: [Hint_cdg] isHomePackageRunning topPkgName = com.naren.sarvajna, topClsName = com.naren.sarvajna.ui.MainActivity, return false
+11-19 14:21:23.173  2852  5154 D GameManagerService: identifyGamePackage. com.naren.sarvajna
+11-19 14:21:23.174 10707 10707 I SAMSUNGPAY: [ServiceTypeTable] isSupportOperator : INS, IN
+11-19 14:21:23.174  2852  9352 D WindowManager: adjustSystemUiVisibilityLw : vis= 0x608
+11-19 14:21:23.175 10707 10707 D SAMSUNGPAY: [ServiceTypeTable] Upgrade - ServiceTypeTable - entryFromCountryIso - index is : 45, iso : IN
+11-19 14:21:23.174  4124  4124 I Launcher: onWindowVisibilityChanged : false
+11-19 14:21:23.176  2852  5154 D GameManagerService: identifyGamePackage. com.naren.sarvajna
+11-19 14:21:23.176 10707 10707 D SAMSUNGPAY: [Hint_SimpleIntroService] Hint Status - HIDE : Home Package Not Running
+11-19 14:21:23.176 10707 10707 I Sally Service: getAttributes()
+11-19 14:21:23.181  2852  5154 D GameManagerService: identifyGamePackage. com.naren.sarvajna
+11-19 14:21:23.189  4124  4124 D ViewRootImpl@3072b6c[LauncherActivity]: mHardwareRenderer.destroy()#1
+11-19 14:21:23.190  2852  2869 V WindowManager: Relayout Window{1d4c0b3d0 u0 com.sec.android.app.launcher/com.sec.android.app.launcher.activities.LauncherActivity}: viewVisibility=8 req=720x1280 WM.LayoutParams{(0,0)(fillxfill) sim=#130 ty=1 fl=#81910d00 pfl=0x20000 fmt=-2 wanim=0x1030391 vsysui=0x700 needsMenuKey=2}
+11-19 14:21:23.194 10707 10707 D ViewRootImpl@a9aa4e2[SimpleIntroHintService]: mHardwareRenderer.destroy()#1
+11-19 14:21:23.196  2852  2870 V WindowManager: Relayout Window{886e741d0 u0 com.samsung.android.spay.simple.SimpleIntroHintService}: viewVisibility=8 req=320x40 WM.LayoutParams{(0,0)(320x40) gr=#51 sim=#20 ty=2024 fl=#1800308 fmt=-3 vsysui=0x2000 naviIconColor=0}
+11-19 14:21:23.196  4124  4124 D ViewRootImpl@3072b6c[LauncherActivity]: Relayout returned: oldFrame=[0,0][720,1280] newFrame=[0,0][720,1280] result=0x5 surface={isValid=false 0} surfaceGenerationChanged=true
+11-19 14:21:23.196  2852  2870 I WindowManager_SurfaceController: Destroying surface Surface(name=com.samsung.android.spay.simple.SimpleIntroHintService) called by com.android.server.wm.WindowStateAnimator.destroySurface:3070 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:1138 com.android.server.wm.WindowState.destroyOrSaveSurface:2836 com.android.server.wm.WindowManagerService.tryStartExitingAnimation:3774 com.android.server.wm.WindowManagerService.relayoutWindow:3574 com.android.server.wm.Session.relayout:240 android.view.IWindowSession$Stub.onTransact:288 com.android.server.wm.Session.onTransact:161 
+11-19 14:21:23.197  2334  3135 I SurfaceFlinger: id=104 Removed com.samsung.android.spay.simple.SimpleIntroHintService (6/6)
+11-19 14:21:23.197  2334  3134 I SurfaceFlinger: id=104 Removed com.samsung.android.spay.simple.SimpleIntroHintService (-2/6)
+11-19 14:21:23.200 10707 10707 D ViewRootImpl@a9aa4e2[SimpleIntroHintService]: Relayout returned: oldFrame=[200,1240][520,1280] newFrame=[200,1240][520,1280] result=0x5 surface={isValid=false 0} surfaceGenerationChanged=true
+11-19 14:21:23.203  3748 18529 I PBSessionCacheImpl: Deleted sessionId[16485420939840377] from persistence.
+11-19 14:21:23.219  3748  3748 W SearchService: Abort, client detached.
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:   Display[0] configurations (* current):
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:     * 0: 720x1280, xdpi=268.941010, ydpi=268.694000, refresh=16666666
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:   numHwLayers=7, flags=00000000
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:     type   |  handle  | hint | flag | tr | blnd |   format    |     source crop (l,t,r,b)      |          frame         | name 
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger: -----------+----------+------+------+----+------+-------------+--------------------------------+------------------------+------
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:        HWC | efa84780 | 0000 | 0020 | 00 | 0100 | RGBx_8888   |  280.0,    0.0, 1000.0, 1280.0 |    0,    0,  720, 1280 | com.android.systemui.ImageWallpaper
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:       GLES | efc8cf00 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |   20.0,   36.0,  699.0, 1243.0 |    0,    0,  720, 1280 | com.sec.android.app.launcher/com.sec.android.app.launcher.activities.LauncherActivity
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:       GLES | efc8d900 | 0000 | 0020 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  720.0, 1280.0 |  132,  235,  587, 1043 | Starting com.naren.sarvajna
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:       GLES | 00000000 | 0000 | 0200 | 00 | 0105 | ? ffffffff  |    0.0,    0.0,   -1.0,   -1.0 |    0,    0,
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:   720, 1280 | DimLayerController/Stack=0
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:       GLES | efc8c280 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  684.0,  303.0 |   43,  522,  676,  803 | Application Error: com.naren.sarvajna
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:        HWC | efc8cd20 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  720.0,   48.0 |    0,    0,  720,   48 | StatusBar
+11-19 14:21:23.244  2334  2334 D SurfaceFlinger:  FB TARGET | efa84280 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  720.0, 1280.0 |    0,    0,  720, 1280 | HWC_FRAMEBUFFER_TARGET
+11-19 14:21:23.300  2852  3088 D MdnieScenarioControlService:  packageName : com.naren.sarvajna    className : com.naren.sarvajna.ui.MainActivity
+11-19 14:21:23.300  2852  3088 V MdnieScenarioControlService: setUIMode from UI function(3)
+11-19 14:21:23.362  2852  2918 I WindowManager_SurfaceController: Destroying surface Surface(name=Application Error: com.naren.sarvajna) called by com.android.server.wm.WindowStateAnimator.destroySurface:3070 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:1138 com.android.server.wm.WindowState.destroyOrSaveSurface:2836 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementInner:510 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacementLoop:284 com.android.server.wm.WindowSurfacePlacer.performSurfacePlacement:232 com.android.server.wm.WindowManagerService$H.handleMessage:9700 android.os.Handler.dispatchMessage:102 
+11-19 14:21:23.362  2334  2342 I SurfaceFlinger: id=102 Removed Application Error: com.naren.sarvajna (4/5)
+11-19 14:21:23.362  2334  2340 I SurfaceFlinger: id=102 Removed Application Error: com.naren.sarvajna (-2/5)
+11-19 14:21:23.364  2852  2918 W AppOps  : Finishing op nesting under-run: uid 1000 pkg android code 24 time=0 duration=0 nesting=0
+11-19 14:21:23.426 20245 20245 I InstantRun: starting instant run server: is main process
+11-19 14:21:23.461  2852  2852 D WifiTrafficPoller: notifyOnDataActivity() - mBusMaxLock.acquire()
+11-19 14:21:23.519 20245 20245 W art     : Before Android 4.1, method android.graphics.PorterDuffColorFilter android.support.graphics.drawable.VectorDrawableCompat.updateTintFilter(android.graphics.PorterDuffColorFilter, android.content.res.ColorStateList, android.graphics.PorterDuff$Mode) would have incorrectly overridden the package-private method in android.graphics.drawable.Drawable
+11-19 14:21:23.534 20245 20245 D AndroidRuntime: Shutting down VM
+--------- beginning of crash
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: FATAL EXCEPTION: main
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: Process: com.naren.sarvajna, PID: 20245
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.naren.sarvajna/com.naren.sarvajna.ui.MainActivity}: java.lang.IllegalStateException: You need to use a Theme.AppCompat theme (or descendant) with this activity.
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2984)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:3045)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.app.ActivityThread.-wrap14(ActivityThread.java)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1642)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:154)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:6776)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:1518)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1408)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: Caused by: java.lang.IllegalStateException: You need to use a Theme.AppCompat theme (or descendant) with this activity.
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.support.v7.app.AppCompatDelegateImpl.createSubDecor(AppCompatDelegateImpl.java:555)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.support.v7.app.AppCompatDelegateImpl.ensureSubDecor(AppCompatDelegateImpl.java:518)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.support.v7.app.AppCompatDelegateImpl.setContentView(AppCompatDelegateImpl.java:466)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.support.v7.app.AppCompatActivity.setContentView(AppCompatActivity.java:140)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at com.naren.sarvajna.ui.MainActivity.onCreate(MainActivity.kt:32)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:6956)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1126)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2927)
+11-19 14:21:23.535 20245 20245 E AndroidRuntime: 	... 9 more
+11-19 14:21:23.536  2852  4052 D Debug   : !@DumpState : SHIP
+11-19 14:21:23.536  2852  4052 D Debug   : !@DumpState : debug level:0x4f4c
+11-19 14:21:23.536  2852  4052 D Debug   : !@Dumpstate : Finally, system will skip dumpstate
+11-19 14:21:23.537  2852  4052 W ActivityManager:   Force finishing activity com.naren.sarvajna/.ui.MainActivity
+11-19 14:21:23.537  2852  4052 W MultiScreenManagerService: moveTaskBackToDisplayIfNeeded(): root is not base activity
+11-19 14:21:23.539  2852  4052 D ActivityManager: moveToFront() : reason=finishActivity adjustFocus setFocusedActivity isAttached=true TaskRecord{f078784d0 #1592 I=com.sec.android.app.launcher/com.android.launcher3.Launcher U=0 StackId=0 sz=1}
+11-19 14:21:23.539  2852  4052 D ActivityManager: setFocusStackUnchecked: reason=finishActivity adjustFocus setFocusedActivity focusCandidate=ActivityStack{2076217d0 stackId=0, 1 tasks} caller=com.android.server.am.ActivityStack.moveToFront:883 com.android.server.am.ActivityStackSupervisor.moveActivityStackToFront:2050 
+11-19 14:21:23.539  2852  4052 W MultiScreenManagerService: moveTaskBackToDisplayIfNeeded(): root activity or app is null
+11-19 14:21:23.543  2852  4052 D InputDispatcher: Focused application set to: xxxx
+11-19 14:21:23.544  2852  4052 D ActivityTrigger: ActivityTrigger activityPauseTrigger 
+11-19 14:21:23.551  2852  2896 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1586000  uid : 1000  pid : 2852  pkgName : AMS_APP_HOME@CPU_MIN@9
+11-19 14:21:23.551  2852  2896 D ActivityManagerPerformance: AMP_acquire() HOME
+11-19 14:21:23.564  2852  2897 D RestrictionPolicy: isGoogleCrashReportAllowed : ret=true userId =0
+11-19 14:21:23.568  2852  2897 D ViewRootImpl@3bacfc7[sarvajna]: ThreadedRenderer.create() translucent=true
+11-19 14:21:23.570  2852  2897 D WindowManager: addWindow: android.view.ViewRootImpl$W@cc349f4 displayId=0
+11-19 14:21:23.571  2852  2897 D InputTransport: Input channel constructed: fd=383
+11-19 14:21:23.571  2852  2897 D InputTransport: Input channel constructed: fd=397
+11-19 14:21:23.571  2852  2897 D WindowManager: openInputChannel mInputChannel: 667051d Application Error: com.naren.sarvajna (server)
+11-19 14:21:23.572  2852  2897 V MARsPolicyManager: handelAlertToastWindowStarted pkgName = android, userId = 0
+11-19 14:21:23.573  2852  2897 D InputDispatcher: Focus entered window: 2852
+11-19 14:21:23.574  2852  2897 D ViewRootImpl@3bacfc7[sarvajna]: setView = DecorView@eda3392[sarvajna] touchMode=true
+11-19 14:21:23.579  2852  2897 D ViewRootImpl@3bacfc7[sarvajna]: dispatchAttachedToWindow
+11-19 14:21:23.580  2852  2897 V WindowManager: Relayout Window{667051dd0 u0 Application Error: com.naren.sarvajna}: viewVisibility=0 req=676x295 WM.LayoutParams{(0,0)(wrapxwrap) gr=#11 sim=#120 ty=2003 fl=#1820002 pfl=0x110 fmt=-3 wanim=0x1030392 surfaceInsets=Rect(4, 4 - 4, 4) needsMenuKey=2 naviIconColor=0}
+11-19 14:21:23.581  2334  2334 I SurfaceFlinger: id=106 createSurf (9x9),1 flag=4, Application Error: com.naren.sarvajna
+11-19 14:21:23.593 20165 20165 I DMT-DropBoxReceiver: Received : android.intent.action.DROPBOX_ENTRY_ADDED
+11-19 14:21:23.595 20165 20165 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.startService:1403 android.content.ContextWrapper.startService:673 android.content.ContextWrapper.startService:673 com.samsung.android.sm.common.DropBoxReceiver.a:47 com.samsung.android.sm.common.DropBoxReceiver.onReceive:29 
+11-19 14:21:23.597  2852  2897 D ViewRootImpl@3bacfc7[sarvajna]: Relayout returned: oldFrame=[0,0][0,0] newFrame=[22,516][698,811] result=0x27 surface={isValid=true -1108164608} surfaceGenerationChanged=true
+11-19 14:21:23.597  2852  2897 D ViewRootImpl@3bacfc7[sarvajna]: mHardwareRenderer.initialize() mSurface={isValid=true -1108164608} hwInitialized=true
+11-19 14:21:23.599  2852  2897 D WindowManager: set systemUiVisibility of statusbar : systemUiFlags= 0x8 fullscreenStackSysUiFlag= 0x0
+11-19 14:21:23.599  2852  3144 I OpenGLRenderer: Initialized EGL, version 1.4
+11-19 14:21:23.599  2852  2897 D ViewRootImpl@3bacfc7[sarvajna]: MSG_WINDOW_FOCUS_CHANGED 1
+11-19 14:21:23.599  2852  3144 D OpenGLRenderer: Swap behavior 1
+11-19 14:21:23.599  2852  2897 D ViewRootImpl@3bacfc7[sarvajna]: mHardwareRenderer.initializeIfNeeded()#2 mSurface={isValid=true -1108164608}
+11-19 14:21:23.601  2852  4073 D WindowManager: adjustSystemUiVisibilityLw : vis= 0x8
+11-19 14:21:23.602  2852  3144 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [684x303]-format:1
+11-19 14:21:23.617  3159  3159 D ImageWallpaper: onVisibilityChanged: mVisible=true visible=false
+11-19 14:21:23.617  3159  3159 D ImageWallpaper: Visibility changed to visible=false
+11-19 14:21:23.619  2852  2897 D WindowManager: finishDrawingWindow: Window{667051dd0 u0 Application Error: com.naren.sarvajna} mDrawState=DRAW_PENDING
+11-19 14:21:23.619  2852  2897 D ViewRootImpl@3bacfc7[sarvajna]: MSG_RESIZED_REPORT: frame=Rect(22, 516 - 698, 811) ci=Rect(0, 0 - 0, 0) vi=Rect(0, 0 - 0, 0) or=1
+11-19 14:21:23.625  2852  2897 D WindowManager: finishDrawingWindow: Window{667051dd0 u0 Application Error: com.naren.sarvajna} mDrawState=HAS_DRAWN
+11-19 14:21:23.633 20165 20271 V CrashedAppLogging: isMasterSwitchOff : false
+11-19 14:21:23.635 20165 20271 W PkgUtils: p: com.naren.sarvajna, u:0
+11-19 14:21:23.662  2334  2334 D SurfaceFlinger:   Display[0] configurations (* current):
+11-19 14:21:23.662  2334  2334 D SurfaceFlinger:     * 0: 720x1280, xdpi=268.941010, ydpi=268.694000, refresh=16666666
+11-19 14:21:23.662  2334  2334 D SurfaceFlinger:   numHwLayers=3, flags=00000000
+11-19 14:21:23.662  2334  2334 D SurfaceFlinger:     type   |  handle  | hint | flag | tr | blnd |   format    |     source crop (l,t,r,b)      |          frame         | name 
+11-19 14:21:23.662  2334  2334 D SurfaceFlinger: -----------+----------+------+------+----+------+-------------+--------------------------------+------------------------+------
+11-19 14:21:23.662  2334  2334 D SurfaceFlinger:       GLES | efc8c1e0 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  684.0,  303.0 |   44,  523,  673,  802 | Application Error: com.naren.sarvajna
+11-19 14:21:23.662  2334  2334 D SurfaceFlinger:        HWC | efc8cd20 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  720.0,   48.0 |    0,    0,  720,   48 | StatusBar
+11-19 14:21:23.662  2334  2334 D SurfaceFlinger:  FB TARGET | efa84280 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  720.0, 1280.0 |    0,    0,  720, 1280 | HWC_FRAMEBUFFER_TARGET
+11-19 14:21:23.669 20008 20019 W PkgUtils: p: com.naren.sarvajna, u:0
+11-19 14:21:23.707  5580  6931 D ScanRecord: parseFromBytes
+11-19 14:21:23.707  5580  6931 D ScanRecord: first manudata for manu ID
+11-19 14:21:23.707  5580  7161 D BtGatt.ContextMap: sendClientScanResult for app id 4
+11-19 14:21:23.707  6831  6842 D ScanRecord: parseFromBytes
+11-19 14:21:23.708  6831  6842 D ScanRecord: first manudata for manu ID
+11-19 14:21:24.045  2852  2896 W ActivityManager: Activity pause timeout for ActivityRecord{ce55621d0 u0 com.naren.sarvajna/.ui.MainActivity t1633 f}
+11-19 14:21:24.046  2852  2896 D ActivityManager: isCustomScaleDownAnimationAllowed() : false
+11-19 14:21:24.046  2852  2896 D ActivityManager: resumeTopActivityInnerLocked() : #0 prevTask=TaskRecord{a20335dd0 #1633 A=com.naren.sarvajna U=0 StackId=1 sz=1} next=ActivityRecord{5ade5d8d0 u0 com.sec.android.app.launcher/.activities.LauncherActivity t1592} mFocusedStack=ActivityStack{2076217d0 stackId=0, 1 tasks}
+11-19 14:21:24.047  2852  2896 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1352000  uid : 1000  pid : 2852  pkgName : AMS_ACT_RESUME@CPU_MIN@53
+11-19 14:21:24.047  2852  2896 D ActivityManagerPerformance: AMP_acquire() ACT_RESUME
+11-19 14:21:24.047  2852  2896 D ActivityManager: applyOptionsLocked(), pendingOptions : null
+11-19 14:21:24.051  2852  2896 V WindowOrientationListener: OrientationSensorJudge.getProposedRotation, Rotation: -1
+11-19 14:21:24.051  2852  2896 V WindowOrientationListener: OrientationSensorJudge.getProposedRotation, Rotation: -1
+11-19 14:21:24.051  2852  2896 V WindowManager: rotationForOrientationLw(orient=5, last=0); user=0  sensorRotation=-1 mLidState=-1 mDockMode=0 mHdmiPlugged=false
+11-19 14:21:24.052  2852  2896 I WindowManager: Failed to capture screenshot of Token{c69ea46 ActivityRecord{ce55621d0 u0 com.naren.sarvajna/.ui.MainActivity t1633 f}} appWin=Window{6ff0991d0 u0 Starting com.naren.sarvajna} drawState=4
+11-19 14:21:24.052  2852  2852 D CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 1586000  uid : 1000  pid : 2852  tag : AMS_APP_HOME@CPU_MIN@9
+11-19 14:21:24.056  2852  3094 D GameManagerService: handleForegroundChange(). pkgName: com.sec.android.app.launcher, clsName: com.android.launcher3.Launcher,FgActivityName:com.sec.android.app.launcher/com.android.launcher3.Launcher
+11-19 14:21:24.056  2852  2896 D MARsPolicyManager: handlePackageResumedFG pkgName = com.sec.android.app.launcher, userId = 0
+11-19 14:21:24.056  2852  3094 D GameManagerService: there is not sem_perfomance_mode on setting
+11-19 14:21:24.056  2852  3094 D GameManagerService: notifyResumePause(). pkg: com.sec.android.app.launcher, type: 4, isMinimized: false, isTunableApp: false
+11-19 14:21:24.056  2852  3094 D GameManagerService:   notifyResumePause(). unexpected mPrevNotiType: -1
+11-19 14:21:24.063  4124  4124 I Launcher: onWindowVisibilityChanged : true
+11-19 14:21:24.066  2852  4073 V WindowManager: Relayout Window{1d4c0b3d0 u0 com.sec.android.app.launcher/com.sec.android.app.launcher.activities.LauncherActivity}: viewVisibility=0 req=720x1280 WM.LayoutParams{(0,0)(fillxfill) sim=#130 ty=1 fl=#81910d00 pfl=0x20000 fmt=-2 wanim=0x1030391 vsysui=0x700 needsMenuKey=2}
+11-19 14:21:24.081  4124  4124 D ViewRootImpl@3072b6c[LauncherActivity]: Relayout returned: oldFrame=[0,0][720,1280] newFrame=[0,0][720,1280] result=0x3 surface={isValid=true -967516160} surfaceGenerationChanged=true
+11-19 14:21:24.081  4124  4124 D ViewRootImpl@3072b6c[LauncherActivity]: mHardwareRenderer.initialize() mSurface={isValid=true -967516160} hwInitialized=true
+11-19 14:21:24.083  4124  4480 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [720x1280]-format:1
+11-19 14:21:24.083  4124  4124 V Launcher: Launcher.onResume()
+11-19 14:21:24.089  4124  4124 D ExternalRequestQueue: Getting and clearing EXTERNAL_REQUEST_LIST: []
+11-19 14:21:24.089  4124  4124 D ExternalMethodQueue: Getting and clearing EXTERNAL_METHOD_LIST: null
+11-19 14:21:24.090  4124  4124 D AppsCustomAdapter: notifyupdate : com.android.launcher3.Launcher@35edf1a
+11-19 14:21:24.090  4124  4124 D AppsDragController: needDeferToBind : true , false
+11-19 14:21:24.090  4124  4124 D InputMethodManager: HSI from window - flag : 0 Pid : 4124
+11-19 14:21:24.091  2852  3938 V InputMethodManagerService: Client requesting input be hidden, flags : 0
+11-19 14:21:24.091  2852  3938 V InputMethodManagerService: hideCurrentInputLocked - !shouldHideSoftInput
+11-19 14:21:24.091  4124  4124 D BixbyApi_0.2.7: isBixbySupported:false
+11-19 14:21:24.091  4124  4124 I BlurUtils: blurByWindowManager with show = true, dest = com.android.internal.policy.PhoneWindow@c4308de, amount = 0.3, duration = -1, sBlur=false
+11-19 14:21:24.092  3748  3748 W SearchServiceClient: Starting with NO_SESSION handoverId is deprecated. Just don't. You will break.
+11-19 14:21:24.092  4124  4124 D Launcher.HomeController: onResume HomeContainer current alpha = 0.0
+11-19 14:21:24.092  2852  9352 D ActivityManager: post active user change for 0 fullscreen true isHomeActivity() true
+11-19 14:21:24.092  2852  9352 I WallpaperManagerService: switchPersonaWallpaper is called for personaId-0
+11-19 14:21:24.092  2852  2852 D WallpaperManagerService:  force update = false; persona id = 0; current user =0; current persona = 0
+11-19 14:21:24.093  2852  2852 D KnoxKeyguardDelegate: clear Flag
+11-19 14:21:24.094  3748  3748 W SessionLifecycleManager: Handover failed. Creating new session controller.
+11-19 14:21:24.097  4124  4124 D AppsDragController: needDeferToBind : true , false
+11-19 14:21:24.098  2852  2869 D SamsungAlarmManager: Cancel Alarm calling from uid:10052 pid :3748 / op:PendingIntent{f7b23a8: PendingIntentRecord{f23d64b com.google.android.googlequicksearchbox startService}}
+11-19 14:21:24.106  3748  3748 E PBSessionCacheImpl: sessionId[16485420939840377] not persisted.
+11-19 14:21:24.110  3748  4482 I PBSessionCacheImpl: Deleted sessionId[16485420939840377] from persistence.
+11-19 14:21:24.115  2852  3031 D WindowManager: finishDrawingWindow: Window{1d4c0b3d0 u0 com.sec.android.app.launcher/com.sec.android.app.launcher.activities.LauncherActivity} mDrawState=DRAW_PENDING
+11-19 14:21:24.115  4124  4124 D AppsAdapter: notifyupdate start : com.android.launcher3.Launcher@35edf1a
+11-19 14:21:24.115  4124  4124 D AppsCustomAdapter: no change items
+11-19 14:21:24.115  4124  4124 D AppsAdapter: notifyupdate end : com.android.launcher3.Launcher@35edf1a
+11-19 14:21:24.116  3159  3159 D WallpaperService: updateSurface forceRelayout=false redrawNeeded=false myWidth=1280 myHeight=1280 fixedSize=true x = 0 y = 0 mWidth=1280 mHeight=1280
+11-19 14:21:24.116  3159  3159 D ImageWallpaper: onVisibilityChanged: mVisible=false visible=true
+11-19 14:21:24.116  3159  3159 D ImageWallpaper: Visibility changed to visible=true
+11-19 14:21:24.116  3159  3159 D ImageWallpaper: drawFrame=false rotation=0 mLastRotation=0
+11-19 14:21:24.116  3159  3159 D ImageWallpaper: drawFrame:[frame.width()]1280[frame.height()]1280
+11-19 14:21:24.116  3159  3159 D ImageWallpaper: surfaceDimensionsChanged=false mLastSurfaceRotation=0 mDisplayWidth=-1 mDisplayHeight=-1
+11-19 14:21:24.117  3159  3159 D ImageWallpaper: redrawNeeded = false, mOffsetsChanged = false
+11-19 14:21:24.117  3159  3159 D ImageWallpaper: Suppressed drawFrame since redraw is not needed and offsets have not changed.
+11-19 14:21:24.118  2852  2918 D CHNLowEndSamsungAnimationCreator: createSamsungAnimation type/enter : 13/false
+11-19 14:21:24.118  2852  2918 D CHNLowEndSamsungAnimationCreator: createSamsungAnimation wallpaerXOffset : -280
+11-19 14:21:24.118  2852  2918 D CHNLowEndSamsungAnimationCreator: createSamsungAnimation isSplit/isFixedOrientation : false/false
+11-19 14:21:24.124  3748  3748 I OptInState: There is a new client and it does not support opt-in. Dropping request.
+11-19 14:21:24.166  2852  3400 D PackageManager: getComponentMetadataForIconTray : com.naren.sarvajna.ui.MainActivity does not exist in mServices
+11-19 14:21:24.166  2852  3400 D PackageManager: getComponentMetadataForIconTray : com.naren.sarvajna.ui.MainActivity does not exist in mProviders
+11-19 14:21:24.166  2852  3400 D PackageManager: getComponentMetadataForIconTray : com.naren.sarvajna.ui.MainActivity does not exist in mReceivers
+11-19 14:21:24.167  3159  3159 D ApplicationPackageManager: updateItemMetaDataForFixedIconScale: package: com.naren.sarvajna
+11-19 14:21:24.167  2852  4091 D PackageManager: getSelectedMetaData : packageName(com.naren.sarvajna) or Metadata strings {[Ljava.lang.String;@4b155fd}
+11-19 14:21:24.167  3159  3159 I ApplicationPackageManager: load=com.naren.sarvajna, bg=144-144, dr=96-96, forDefault=true, density=0
+11-19 14:21:24.168  3159  3159 I ApplicationPackageManager: scaled rate=201.0, size=96, alpha=8, hold=26
+11-19 14:21:24.168  3159  3159 D ApplicationPackageManager: iconScale: getScale(): 201.0 getAlpha(): 8
+11-19 14:21:24.170  3159  3159 I ApplicationPackageManager: load=com.naren.sarvajna-crop, bg=80-80, dr=96-96
+11-19 14:21:24.462  2852  2852 D WifiTrafficPoller: notifyOnDataActivity() - mBusMaxLock.acquire()
+11-19 14:21:24.466  2852  2918 D WindowManager: disposeInputChannel mInputChannel: 6ff0991 Starting com.naren.sarvajna (server)
+11-19 14:21:24.467  2852  2918 I WindowManager_SurfaceController: Destroying surface Surface(name=Starting com.naren.sarvajna) called by com.android.server.wm.WindowStateAnimator.destroySurface:3070 com.android.server.wm.WindowStateAnimator.destroySurfaceLocked:1138 com.android.server.wm.WindowState.removeLocked:1934 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:3056 com.android.server.wm.WindowManagerService.removeWindowInnerLocked:3016 com.android.server.wm.AppWindowToken.destroySurfaces:432 com.android.server.wm.AppWindowToken.destroySurfaces:393 com.android.server.wm.WindowStateAnimator.finishExit:699 
+11-19 14:21:24.467  2334  3135 I SurfaceFlinger: id=105 Removed Starting com.naren.sarvajna (2/5)
+11-19 14:21:24.469  2852  2918 D InputTransport: Input channel destroyed: fd=375
+11-19 14:21:24.471  2334  3134 I SurfaceFlinger: id=105 Removed Starting com.naren.sarvajna (-2/5)
+11-19 14:21:24.471  2852  2918 D ViewRootImpl@1e1a1b[sarvajna]: dispatchDetachedFromWindow
+11-19 14:21:24.472  2852  2918 W WindowManager: Failed looking up window
+11-19 14:21:24.472  2852  2918 W WindowManager: java.lang.IllegalArgumentException: Requested window android.view.ViewRootImpl$W@4a787b8 does not exist
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at com.android.server.wm.WindowManagerService.windowForClientLocked(WindowManagerService.java:10875)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at com.android.server.wm.WindowManagerService.windowForClientLocked(WindowManagerService.java:10866)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at com.android.server.wm.WindowManagerService.removeWindow(WindowManagerService.java:2783)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at com.android.server.wm.Session.remove(Session.java:218)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at android.view.ViewRootImpl.dispatchDetachedFromWindow(ViewRootImpl.java:3739)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at android.view.ViewRootImpl.doDie(ViewRootImpl.java:6685)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at android.view.ViewRootImpl$ViewRootHandler.handleMessage(ViewRootImpl.java:4156)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at android.os.Looper.loop(Looper.java:154)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at android.os.HandlerThread.run(HandlerThread.java:61)
+11-19 14:21:24.472  2852  2918 W WindowManager: 	at com.android.server.ServiceThread.run(ServiceThread.java:46)
+11-19 14:21:24.473  2852  2918 D InputTransport: Input channel destroyed: fd=381
+11-19 14:21:24.473  2852  2918 D ViewRootImpl@2a89838[ContainerKeyguardScrim]: mHardwareRenderer.destroy()#1
+11-19 14:21:24.488  2852  3110 I WifiWatchdogStateMachine.CaptivePortalHandler: TIMEOUT_CAPTIVE_PORTAL reason: 3
+11-19 14:21:24.489  2852  2918 D CustomFrequencyManagerService: FrequencyrequestList.getNextCStateDisableRequest, index: 1
+11-19 14:21:24.489  2852  3106 I WifiWatchdogStateMachine: 11-19 14:21:24.489, InvalidNonSwitchableState, [i]-1, [s]4, [t]11/11, [e]9, [b]-1, [u]-1/1, -55, 72, false(true/false/false/true/true/true/true/true), false(false/true), false(true/true/true), 0, 224c69746869756d22, c414d5, 3381
+11-19 14:21:24.489  2852  2918 D CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 1352000  uid : 1000  pid : 2852  tag : AMS_ACT_RESUME@CPU_MIN@53
+11-19 14:21:24.489  2852  2918 D ActivityManagerPerformance: AMP_release() ACT_RESUME
+11-19 14:21:24.490  2852  3106 I WifiWatchdogStateMachine: 11-19 14:21:24.490, InvalidNonSwitchableState, 192.168.123.116  0x1         0x2         8c:85:90:ba:7a:8e     *        wlan0192.168.123.1    0x1         0x2         00:e0:20:15:0f:ee     *        wlan0
+11-19 14:21:24.490  2852  3106 D WifiWatchdogStateMachine: goodRssi=-50 goodCount=5 lastGood=1291230 lastPoor=1291230 avoidMax=30000
+11-19 14:21:24.490  2852  2918 D CustomFrequencyManagerService: acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1482000  uid : 1000  pid : 2852  pkgName : AMS_RESUME_TAIL@CPU_MIN@21
+11-19 14:21:24.490  2852  2918 D ActivityManagerPerformance: AMP_acquire() TAIL
+11-19 14:21:24.491  2852  2918 D CustomFrequencyManagerService: FrequencyrequestList.getNextMaxCPUCoreRequest, index: 1
+11-19 14:21:24.491  2852  2918 D CustomFrequencyManagerService: releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 1586000  uid : 1000  pid : 2852  tag : AMS_APP_SWITCH@CPU_MIN@15
+11-19 14:21:24.491  2852  2918 D ActivityManagerPerformance: AMP_release() APP_SWITCH
+11-19 14:21:24.497  3360  3372 D ForegroundUtils: could not check pending caller
+11-19 14:21:24.497 10707 10717 I SAMSUNGPAY: [Hint_ProcessStatusChange] fg Change, pid : 20245 , isNotify : true , isForeground : false , fg list : [4124]
+11-19 14:21:24.498 10707 11011 I SAMSUNGPAY: [Hint_cdg] ensureHomePackagesLoaded - already update, isHomePackageEmpty : false, isKnoxRunning : false
+11-19 14:21:24.502 10707 11011 I SAMSUNGPAY: [Hint_cdg] isHomePackageRunning topPkgName = com.sec.android.app.launcher, topClsName = com.sec.android.app.launcher.activities.LauncherActivity, return true
+11-19 14:21:24.504 10707 10707 I SAMSUNGPAY: [ServiceTypeTable] isSupportOperator : INS, IN
+11-19 14:21:24.505 10707 10707 D SAMSUNGPAY: [ServiceTypeTable] Upgrade - ServiceTypeTable - entryFromCountryIso - index is : 45, iso : IN
+11-19 14:21:24.505 10707 10707 I Sally Service: getAttributes()
+11-19 14:21:24.505 10707 10707 D SAMSUNGPAY: [Hint_SimpleIntroService] Hint Status - SHOW, y : 0.0
+11-19 14:21:24.516  2852  4090 V WindowManager: Relayout Window{886e741d0 u0 com.samsung.android.spay.simple.SimpleIntroHintService}: viewVisibility=0 req=320x40 WM.LayoutParams{(0,0)(320x40) gr=#51 sim=#20 ty=2024 fl=#1800308 fmt=-3 vsysui=0x2000 naviIconColor=0}
+11-19 14:21:24.518  2334  2334 I SurfaceFlinger: id=107 createSurf (320x40),1 flag=4, com.samsung.android.spay.simple.SimpleIntroHintService
+11-19 14:21:24.522 10707 10707 D ViewRootImpl@a9aa4e2[SimpleIntroHintService]: Relayout returned: oldFrame=[200,1240][520,1280] newFrame=[200,1240][520,1280] result=0x7 surface={isValid=true -800757760} surfaceGenerationChanged=true
+11-19 14:21:24.523 10707 10707 D ViewRootImpl@a9aa4e2[SimpleIntroHintService]: mHardwareRenderer.initialize() mSurface={isValid=true -800757760} hwInitialized=true
+11-19 14:21:24.524 10707 11015 D mali_winsys: EGLint new_window_surface(egl_winsys_display*, void*, EGLSurface, EGLConfig, egl_winsys_surface**, egl_color_buffer_format*, EGLBoolean) returns 0x3000,  [320x40]-format:1
+11-19 14:21:24.538  2852  3031 D WindowManager: finishDrawingWindow: Window{886e741d0 u0 com.samsung.android.spay.simple.SimpleIntroHintService} mDrawState=DRAW_PENDING
+11-19 14:21:24.557  2852  3110 D WifiWatchdogStateMachine:  [|1] [] []
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:   Display[0] configurations (* current):
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:     * 0: 720x1280, xdpi=268.941010, ydpi=268.694000, refresh=16666666
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:   numHwLayers=7, flags=00000000
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:     type   |  handle  | hint | flag | tr | blnd |   format    |     source crop (l,t,r,b)      |          frame         | name 
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger: -----------+----------+------+------+----+------+-------------+--------------------------------+------------------------+------
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:        HWC | efa84780 | 0000 | 0020 | 00 | 0100 | RGBx_8888   |  280.0,    0.0, 1000.0, 1280.0 |    0,    0,  720, 1280 | com.android.systemui.ImageWallpaper
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:       GLES | efa84820 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  720.0, 1280.0 |    0,    0,  720, 1280 | com.sec.android.app.launcher/com.sec.android.app.launcher.activities.LauncherActivity
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:       GLES | 00000000 | 0000 | 0200 | 00 | 0105 | ? ffffffff  |   -0.2,   -0.2,   -0.8,   -0.8 |    0,    0,  720, 1280 | DimLayerController/Stack=0
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:       GLES | efc8c1e0 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  684.0,  303.0 |   18,  512, 
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:  702,  815 | Application Error: com.naren.sarvajna
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:       GLES | efc8cd20 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  720.0,   48.0 |    0,    0,  720,   48 | StatusBar
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:        HWC | efc8c8c0 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  320.0,   40.0 |  200, 1240,  520, 1280 | com.samsung.android.spay.simple.SimpleIntroHintService
+11-19 14:21:24.568  2334  2334 D SurfaceFlinger:  FB TARGET | efa84280 | 0000 | 0000 | 00 | 0105 | RGBA_8888   |    0.0,    0.0,  720.0, 1280.0 |    0,    0,  720, 1280 | HWC_FRAMEBUFFER_TARGET
+11-19 14:21:24.617  4124  4480 W OpenGLRenderer: Incorrectly called buildLayer on View: WorkspaceCellLayoutChildren, destroying layer...
+11-19 14:21:24.617  4124  4480 W OpenGLRenderer: Incorrectly called buildLayer on View: WorkspaceCellLayoutChildren, destroying layer...
+11-19 14:21:24.628  2852  3088 D MdnieScenarioControlService:  packageName : com.sec.android.app.launcher    className : com.sec.android.app.launcher.activities.LauncherActivity
+11-19 14:21:24.628  2852  3088 V MdnieScenarioControlService: setUIMode from UI function(2)
+11-19 14:21:24.735  4152  4231 D ContactsProvider_EventLog: contents_sample_state: [ contacts(2) data(4) accounts({vnd.sec.contact.phone (1)=2}) accounts deleted({}) calls([logtype:100 cnt:4, logtype:300 cnt:20]) countryIso(IN) userId(0)  ]
+11-19 14:21:24.735  4152  4231 D ContactsProvider_EventLog: contents_sample_state: [ agr({[1]=2})  ]
+11-19 14:21:24.735  4152  4231 D ContactsProvider_EventLog: contents_sample_state: [ actCnt({android.process.acore=4, com.google.android.gms=10})  ]
+11-19 14:21:24.738  4152  4231 E ContactsProvider_EventLog: Flush buffer to file cnt : 1 size : 0Kb duration : 2ms lastUpdatedAfter : 34368 ms mFlush_time_threasold : 2000 mCurrentSize : 353
+11-19 14:21:24.799  2852  5154 D GamePkgDataHelper: getGamePkgData(). com.sec.android.app.launcher
+11-19 14:21:24.800  2852  5154 D GameManagerService: identifyGamePackage. com.sec.android.app.launcher
+11-19 14:21:24.801  2852  5154 D GameManagerService: identifyGamePackage. com.sec.android.app.launcher
+11-19 14:21:24.802  2852  5154 D GameManagerService: identifyGamePackage. com.sec.android.app.launcher
+11-19 14:21:24.803  2852  5154 D GameManagerService: identifyGamePackage. com.sec.android.app.launcher
