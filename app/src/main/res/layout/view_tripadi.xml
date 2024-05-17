@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout  xmlns:android="http://schemas.android.com/apk/res/android">
-    <data>
-        <variable name="tripadi" type="com.naren.sarvajna.data.Tripadi"/>
+    <data class="com.naren.sarvajna.vm.TripadiViewModelBinder">
+        <variable name="tripadi2" type="com.naren.sarvajna.data.Tripadi"/>
         <variable name="events" type="com.naren.sarvajna.vm.TripadiViewModel.Events"/>
     </data>
     <RelativeLayout
@@ -17,7 +17,7 @@
                 android:padding="5dp"
                 android:layout_centerVertical="true"
                 android:textColor="@android:color/black"
-                android:text="@{tripadi.tripadi}"
+                android:text="@{tripadi2.tripadi}"
                 android:textSize="14sp"
                 android:layout_margin="10dp"
                 android:id="@+id/tripadi"
@@ -29,7 +29,7 @@
                 android:layout_below="@id/tripadi"
                 android:layout_margin="5dp"
                 android:layout_centerHorizontal="true"
-                android:onClick="@{(v)->events.share(tripadi)}"
+                android:onClick="@{(v)->events.share(tripadi2)}"
                 android:background="@android:drawable/menuitem_background"
                 android:id="@+id/share"
                 android:layout_height="35dp"/>
@@ -41,9 +41,9 @@
                 android:layout_below="@id/tripadi"
                 android:layout_toLeftOf="@id/share"
                 android:layout_toStartOf="@+id/share"
-                android:checked="@={tripadi.favorite}"
+                android:checked="@={tripadi2.favorite}"
                 android:layout_margin="5dp"
-                android:onClick="@{(v)->events.edit(tripadi)}"
+                android:onClick="@{(v)->events.edit(tripadi2)}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -56,7 +56,7 @@
                 android:adjustViewBounds="true"
                 android:background="@android:drawable/menuitem_background"
                 android:layout_margin="5dp"
-                android:onClick="@{(v)->events.copy(tripadi)}"
+                android:onClick="@{(v)->events.copy(tripadi2)}"
                 android:id="@+id/copy"
                 android:layout_height="35dp"/>
     </RelativeLayout>

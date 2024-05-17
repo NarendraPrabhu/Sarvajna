@@ -1,24 +1,23 @@
 package com.naren.sarvajna.ui
 
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProvider
-import android.arch.lifecycle.ViewModelProviders
+import Sarvajna.R
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.annotation.NonNull
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.SearchView
+import androidx.annotation.NonNull
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import android.view.*
 import android.widget.BaseAdapter
 import android.widget.ListView
 import android.widget.Toast
-import com.naren.sarvajna.R
 import com.naren.sarvajna.data.Tripadi
-import com.naren.sarvajna.databinding.ViewTripadiBinding
 import com.naren.sarvajna.vm.TripadiViewModel
+import com.naren.sarvajna.vm.TripadiViewModelBinder
 
 class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewModel.DatabaseEvents, SearchView.OnQueryTextListener {
 
@@ -31,11 +30,11 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var factory = object :  ViewModelProvider.NewInstanceFactory() {
-            override fun <T : ViewModel?> create(modelClass: Class<T>) : T {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
                 return TripadiViewModel(this@MainActivity, this@MainActivity) as T
             }
         }
-        tripadiViewModel = ViewModelProviders.of(this, factory).get(TripadiViewModel::class.java)
+        tripadiViewModel = ViewModelProvider(this, factory).get(TripadiViewModel::class.java)
         listView = findViewById<ListView>(R.id.list)
     }
 
@@ -73,16 +72,16 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
     inner class TripadiAdapter(val items : List<Tripadi>) : BaseAdapter () {
 
         override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
-            var binding : ViewTripadiBinding?
+            var binding : TripadiViewModelBinder?
             if(p1 == null){
-                binding = ViewTripadiBinding.inflate(this@MainActivity.layoutInflater)
+                binding = TripadiViewModelBinder.inflate(this@MainActivity.layoutInflater)
                 var v = binding.root
                 v.tag = binding
             } else {
-                binding = p1.tag as ViewTripadiBinding?
+                binding = p1.tag as TripadiViewModelBinder?
             }
             var tripadi = getItem(p0)
-            binding?.setTripadi(tripadi)
+            binding?.tripadi2 = tripadi
             binding?.events = this@MainActivity
             return binding?.root!!
         }
@@ -102,7 +101,7 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
 
     override fun copy(tripadi: Tripadi) {
         if (tripadi != null) {
-            val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("Kagga", tripadi.toString())
             clipboard.setPrimaryClip(clip)
             Toast.makeText(this, R.string.warning_kagga_copied, Toast.LENGTH_SHORT).show()
@@ -180,12 +179,12 @@ class MainActivity : AppCompatActivity(), TripadiViewModel.Events, TripadiViewMo
     }
 
     fun savePosition(position : Int) {
-        var editor = getPreferences(Context.MODE_PRIVATE).edit();
+        var editor = getPreferences(MODE_PRIVATE).edit();
         editor.putInt("position", position).commit()
     }
 
     fun getPostion() : Int{
-        var prefs = getPreferences(Context.MODE_PRIVATE)
+        var prefs = getPreferences(MODE_PRIVATE)
         return prefs.getInt("position", 0)
     }
 

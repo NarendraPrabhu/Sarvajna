@@ -1,10 +1,10 @@
 package com.naren.sarvajna.vm
 
 import android.app.Activity
-import android.arch.lifecycle.AndroidViewModel
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.Observer
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import com.naren.sarvajna.data.Tripadi
 import com.naren.sarvajna.data.TripadiDao
 import com.naren.sarvajna.data.TripadiDatabase
